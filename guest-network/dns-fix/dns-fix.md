@@ -7,4 +7,4 @@ To provide guests with a DNS (they will not be able to reach the Omnia itself  a
 4. Click: Advanced  Settings (tab-hyperlink)
 5. Fill out: `DHCP-Options` to be: `6,192.168.2.1`
 
-NOTE: The `6` (in step 5) has something to do the data-length of the DHCP option (for more info refer to [networksorcery.com](http://www.networksorcery.com/enp/protocol/bootp/options.htm)).
+NOTE: The `6` (in step 6) has something to do the data-length of the DHCP option (for more info refer to [networksorcery.com](http://www.networksorcery.com/enp/protocol/bootp/options.htm)).
