@@ -1,13 +1,12 @@
 SSH looks for the user's `~/.ssh/config` file. It will use the default (~/.ssh/id_rsa) if not specified otherwise. So set it up as followed:
  
-    Host            gitserv
-        Hostname        remote.server.com
-        IdentityFile    ~/.ssh/id_rsa.github
+    Host github.com
+        Hostname github.com
+        IdentityFile ~/.ssh/id_rsa.github
         IdentitiesOnly yes # see NOTES below
-    
-### NOTES
 
- - The `IdentitiesOnly yes` is required to [prevent the SSH default behavior][2] of sending the identity file matching the default filename for each protocol. If you have a file named `~/.ssh/id_rsa` that will get tried BEFORE your `~/.ssh/id_rsa.github` without this option.
+### NOTES
+- The `IdentitiesOnly yes` is required to [prevent the SSH default behavior][2] of sending the identity file matching the default filename for each protocol. If you have a file named `~/.ssh/id_rsa` that will get tried BEFORE your `~/.ssh/id_rsa.github` without this option.
 
 ### References
 
