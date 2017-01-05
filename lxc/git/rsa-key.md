@@ -1,5 +1,3 @@
-Adapted from: http://stackoverflow.com/a/11251797/6737459
-
 SSH looks for the user's `~/.ssh/config` file.
 
 It will use the default (~/.ssh/id_rsa) if not specified otherwise. So set it up as followed:
@@ -13,7 +11,7 @@ It will use the default (~/.ssh/id_rsa) if not specified otherwise. So set it up
 - The `IdentitiesOnly yes` is required to [prevent the SSH default behavior][2] of sending the identity file matching the default filename for each protocol. If you have a file named `~/.ssh/id_rsa` that will get tried *before* your `~/.ssh/id_rsa.github` without this option.
 
 ### References
-
+- Adapted from: http://stackoverflow.com/a/11251797/6737459
 - [Best way to use multiple SSH private keys on one client][1]
 - [How could I stop ssh offering a wrong key][2]
 
