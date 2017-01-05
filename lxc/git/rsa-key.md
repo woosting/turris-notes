@@ -6,7 +6,7 @@ SSH looks for the user's `~/.ssh/config` file. It will use the default (~/.ssh/i
         IdentitiesOnly yes # see NOTES below
 
 ### NOTES
-- The `IdentitiesOnly yes` is required to [prevent the SSH default behavior][2] of sending the identity file matching the default filename for each protocol. If you have a file named `~/.ssh/id_rsa` that will get tried BEFORE your `~/.ssh/id_rsa.github` without this option.
+- The `IdentitiesOnly yes` is required to [prevent the SSH default behavior][2] of sending the identity file matching the default filename for each protocol. If you have a file named `~/.ssh/id_rsa` that will get tried *before* your `~/.ssh/id_rsa.github` without this option.
 
 ### References
 
