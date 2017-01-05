@@ -1,5 +1,7 @@
-SSH looks for the user's `~/.ssh/config` file. It will use the default (~/.ssh/id_rsa) if not specified otherwise. So set it up as followed:
- 
+SSH looks for the user's `~/.ssh/config` file.
+
+It will use the default (~/.ssh/id_rsa) if not specified otherwise. So set it up as followed:
+
     Host github.com
         Hostname github.com
         IdentityFile ~/.ssh/id_rsa.github
