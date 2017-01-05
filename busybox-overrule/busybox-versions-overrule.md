@@ -1,6 +1,6 @@
 ### Manual
 
-Execute: `/usr/lib/opkg/info/wget.postinst`
+  Execute: `/usr/lib/opkg/info/wget.postinst`
 
 ### Automated
 
