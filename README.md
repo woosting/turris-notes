@@ -1,4 +1,4 @@
-# Turris-Omnia
+# Turris Omnia documentation
 
 Welcome to the (unofficial) [Turris-Omnia](https://omnia.turris.cz/en/) documentation repository!
 
