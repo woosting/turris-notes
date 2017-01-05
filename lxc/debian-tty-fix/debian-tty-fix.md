@@ -1,3 +1,5 @@
+# POSSIBLY DEPDRICATED (fixed in container template).
+
 In the guest (container):
 
 1. `cp /lib/systemd/system/getty@.service /etc/systemd/system`
