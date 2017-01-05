@@ -1,3 +1,5 @@
+Adapted from: http://stackoverflow.com/a/11251797/6737459
+
 SSH looks for the user's `~/.ssh/config` file.
 
 It will use the default (~/.ssh/id_rsa) if not specified otherwise. So set it up as followed:
