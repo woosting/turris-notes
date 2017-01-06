@@ -22,7 +22,7 @@
   option include_config '/etc/kresd.custom.conf'
   ```
     
-  > ALTERNATIVELY (step 3 in one command):
+  > ALTERNATIVE (step 3 in one command):
   >
   > `root@turris:~# sed -i 's/#option include_config '\''\/tmp\/kresd\.custom\.conf'\''/option include_config '\''\/etc\/kresd.custom.conf'\''/g' /etc/config/resolver`
 
@@ -54,4 +54,4 @@
 
 6. `root@turris:~# /etc/init.d/kresd restart && /etc/init.d/dnsmasq restart`
 
-Also see: https://forum.turris.cz/t/dnsmasq-lan-domain-while-still-using-knot-resolver/1253/29
+> Also see: https://forum.turris.cz/t/dnsmasq-lan-domain-while-still-using-knot-resolver/1253/29
