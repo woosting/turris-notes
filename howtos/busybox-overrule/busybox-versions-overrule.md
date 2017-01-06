@@ -1,11 +1,11 @@
 # Manually
-1. `root@turris:~# /usr/lib/opkg/info/wget.postinst`
-2. `root@turris:~# /usr/lib/opkg/info/less.postinst`
+1. root@turris:~# `/usr/lib/opkg/info/wget.postinst`
+2. root@turris:~# `/usr/lib/opkg/info/less.postinst`
 
 > ALTERNATIVE (step 1 and 2 in one command): `root@turris:~# /usr/lib/opkg/info/wget.postinst; /usr/lib/opkg/info/less.postinst`
 
 # Automated (by calling the postinst after every update)
-1. `root@turris:~# vim /etc/updater/hook_postupdate/04_hooks.sh`
+1. root@turris:~# `vim /etc/updater/hook_postupdate/04_hooks.sh`
 2. Populate it with:
 
   ```
