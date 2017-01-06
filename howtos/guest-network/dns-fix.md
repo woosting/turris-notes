@@ -7,4 +7,4 @@ To provide guests with a DNS (as they can not reach turris' one after completing
 4. Click hyperlinkt-tab: **|Advanced Settings|**
 5. Fill out: **DHCP-Options**: `6,192.168.2.1`
 
-NOTE: The `6` (in step 6) has something to do the data-length of the DHCP option (for more info refer to [networksorcery.com](http://www.networksorcery.com/enp/protocol/bootp/options.htm)).
+> NOTE: The `6` (in step 6) has something to do the data-length of the DHCP option (for more info refer to [networksorcery.com](http://www.networksorcery.com/enp/protocol/bootp/options.htm)).
