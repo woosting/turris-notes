@@ -1,6 +1,6 @@
 # Manually
 
-root@omnia:~# `/usr/lib/opkg/info/wget.postinst; /usr/lib/opkg/info/less.postinst`
+`root@omnia:~# /usr/lib/opkg/info/wget.postinst; /usr/lib/opkg/info/less.postinst`
 
 # Automated (by calling the postinst after every update)
 root@omnia:~# `echo -e '#!/bin/sh\n /usr/lib/opkg/info/less.postinst\n /usr/lib/opkg/info/wget.postinst' > /etc/updater/hook_postupdate/04_hooks.sh`
