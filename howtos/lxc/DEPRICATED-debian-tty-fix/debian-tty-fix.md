@@ -2,13 +2,11 @@
 
 In the guest (container):
 
-1. `cp /lib/systemd/system/getty@.service /etc/systemd/system`
+1. root@container:~# `cp /lib/systemd/system/getty@.service /etc/systemd/system`
 
-2. `vim /lib/systemd/system/getty@.service`
+2. root@container:~# `vim /lib/systemd/system/getty@.service` and comment-out the line:
 
-3. Comment-out the line:
-
-	```
+        ```
 	ConditionPathExists=/dev/tty0
 	```
 
@@ -18,4 +16,4 @@ In the guest (container):
 	#ConditionPathExists=/dev/tty0
 	```
 
-Source: https://wiki.debian.org/LXC
+> REFERENCE: https://wiki.debian.org/LXC
