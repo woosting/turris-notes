@@ -16,14 +16,12 @@
   ```
   #option include_config '/tmp/kresd.custom.conf'
   ```
-  ...with:
+  ...with (note the removal of the hash-tag!):
 
   ```
   option include_config '/etc/kresd.custom.conf'
   ```
-
-  Note the removal of the hash-tag!
-  
+    
   > ALTERNATIVELY (in one command):
   >
   > `root@turris:~# sed -i 's/#option include_config '\''\/tmp\/kresd\.custom\.conf'\''/option include_config '\''\/etc\/kresd.custom.conf'\''/g' /etc/config/resolver`
