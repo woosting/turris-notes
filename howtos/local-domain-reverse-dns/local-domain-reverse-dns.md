@@ -1,7 +1,7 @@
 # Set dnsmasq's server port
 
 1. Login to: [LuCI](192.168.1.1/cgi-bin/luci/)
-2. Navigate to: ***Network > DHCP and DNS ***
+2. Navigate to: ***Network > DHCP and DNS***
 3. Click the hyperlinc-tab: **|Advanced Settings|**
 3. Scrol down and fill out: **DNS Server Port** to be: `5353`
 
