@@ -1,15 +1,14 @@
-### Manual
+# Manually
 
-1. Execute: `/usr/lib/opkg/info/wget.postinst`
+1. `# /usr/lib/opkg/info/wget.postinst`
 
-### Automated
+# Automated
 
-1. Execute: `vim /etc/updater/hook_postupdate/04_hooks.sh`
+1. `# vim /etc/updater/hook_postupdate/04_hooks.sh`
 2. Populate it with:
 
   ```
   #!/bin/sh
   /usr/lib/opkg/info/less.postinst
   ```
-
 See: https://forum.turris.cz/t/wget-busybox-vs-package-wget/2547/3
