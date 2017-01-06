@@ -1,4 +1,4 @@
-1. `root@turris:~# btrfs subvolume create /srv/lxc/<containername>`
+1. root@turris:~# `btrfs subvolume create /srv/lxc/<containername>`
 2. LuCI: Create the container having the same name as the just created btrfs subvolume.
 2. `root@turris:~# ~/import -c <containernaam> -u <username>` .. grab coffee ..
 3. `root@turris:~# lxc-attach -n <containername>`
