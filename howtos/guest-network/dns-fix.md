@@ -8,3 +8,7 @@ To provide guests with a DNS (as they can not reach turris' one after completing
 5. Fill out: **DHCP-Options**: `6,192.168.2.1`
 
 > NOTE: The `6` (in step 6) has something to do the data-length of the DHCP option (for more info refer to [networksorcery.com](http://www.networksorcery.com/enp/protocol/bootp/options.htm)).
+
+> REFERENCE: https://wiki.openwrt.org/doc/recipes/guest-wlan-webinterface
+
+> REFERENCE: https://wiki.openwrt.org/doc/recipes/guest-wlan
