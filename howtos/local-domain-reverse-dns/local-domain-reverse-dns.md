@@ -21,15 +21,17 @@
   ```
 
   Note the removal of the hash-tag!
+  
+  (to test (instead of manual file editing): `root@turris:~# sed -i '\/s\/#option include_config \'\/tmp\/kresd\.custom\.conf\'/option include_config '\''\/etc\/kresd.custom.conf'\''\/ /etc/config/resolver`
 
-3. `root@turris:~# cp /etc/init.d/kresd /etc/init.d/kresd.bak && vim /etc/init.d/kresd` and move the lines (134 & 135):
+3. `root@turris:~# cp /etc/init.d/kresd /etc/init.d/kresd.bak && vim /etc/init.d/kresd` and move the lines 134 & 135:
 
   ```
   # include custom kresd config
   include_custom_config
   ```
 
-  ...right above (line 122 & 123):
+  ...right above line 122 & 123:
 
   ```
   config_get_bool do_forward "$section" forward_upstream 1
