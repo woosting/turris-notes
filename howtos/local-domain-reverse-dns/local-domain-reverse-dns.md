@@ -6,7 +6,7 @@
 
 # Set (update persistent) kresd policy
 
-1. # `echo "policy.add(policy.suffix(policy.FORWARD('127.0.0.1@5353'),  policy.todnames({'lan'})))" >> /etc/kresd.custom.conf` (persisting reboots and updates, as it is custom).
+1. \# `echo "policy.add(policy.suffix(policy.FORWARD('127.0.0.1@5353'),  policy.todnames({'lan'})))" >> /etc/kresd.custom.conf` (persisting reboots and updates, as it is custom).
 
 2. `# cp /etc/config/resolver /etc/config/resolver.bak && vim /etc/config/resolver` and replace line 22:
 
