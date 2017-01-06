@@ -1,4 +1,4 @@
-To provide guests with a DNS (after completing the [openWRT (LuCI) recipe for making a guest WiFi network](https://wiki.openwrt.org/doc/recipes/guest-wlan-webinterface):
+To provide guests with a DNS (as they can not reach turris' one after completing the [openWRT (LuCI) recipe for making a guest WiFi network](https://wiki.openwrt.org/doc/recipes/guest-wlan-webinterface)):
 
 0. Login to: [LuCI](192.168.1.1/cgi-bin/luci/)
 1. Navigate to: ***Network > Interfaces***
