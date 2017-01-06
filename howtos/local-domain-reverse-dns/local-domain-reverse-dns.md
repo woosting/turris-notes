@@ -9,7 +9,9 @@
 
 1. `root@turris:~# echo "policy.add(policy.suffix(policy.FORWARD('127.0.0.1@5353'),  policy.todnames({'lan'})))" >> /etc/kresd.custom.conf` (persisting reboots and updates, as it is custom).
 
-2. `root@turris:~# cp /etc/config/resolver /etc/config/resolver.bak && vim /etc/config/resolver` and replace line 22:
+2. `root@turris:~# cp /etc/config/resolver /etc/config/resolver.bak`
+
+3. `root@turris:~# vim /etc/config/resolver` and replace line 22:
 
   ```
   #option include_config '/tmp/kresd.custom.conf'
@@ -22,9 +24,11 @@
 
   Note the removal of the hash-tag!
   
-  (to test (instead of manual file editing): `root@turris:~# sed -i '\/s\/#option include_config \'\/tmp\/kresd\.custom\.conf\'/option include_config '\''\/etc\/kresd.custom.conf'\''\/ /etc/config/resolver`
+  TEST (instead of step 3): `root@turris:~# sed -i '\/s\/#option include_config \'\/tmp\/kresd\.custom\.conf\'/option include_config '\''\/etc\/kresd.custom.conf'\''\/ /etc/config/resolver`
 
-3. `root@turris:~# cp /etc/init.d/kresd /etc/init.d/kresd.bak && vim /etc/init.d/kresd` and move the lines 134 & 135:
+4. `root@turris:~# cp /etc/init.d/kresd /etc/init.d/kresd.bak`
+
+5. `root@turris:~# vim /etc/init.d/kresd` and move the lines 134 & 135:
 
   ```
   # include custom kresd config
@@ -48,6 +52,6 @@
   if [ "$do_forward" = "1" ] ; then
   ```
 
-4. `root@turris:~# /etc/init.d/kresd restart && /etc/init.d/dnsmasq restart`
+6. `root@turris:~# /etc/init.d/kresd restart && /etc/init.d/dnsmasq restart`
 
 Also see: https://forum.turris.cz/t/dnsmasq-lan-domain-while-still-using-knot-resolver/1253/29
