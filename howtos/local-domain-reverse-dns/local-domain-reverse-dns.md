@@ -52,4 +52,4 @@
 
 6. root@turris:~# `/etc/init.d/kresd restart && /etc/init.d/dnsmasq restart`
 
-> REFERENCE: https://forum.turris.cz/t/dnsmasq-lan-domain-while-still-using-knot-resolver/1253/29
+> REFERENCE: https://forum.turris.cz/t/dnsmasq-lan-domain-while-still-using-knot-resolver/1253
