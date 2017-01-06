@@ -1,14 +1,15 @@
 # Set dnsmasq's server port
 
-1. Log in to LuCI
-2. Navigate to: **Network > DHCP and DNS > Advanced Settings** (tab/hyper-link)
+1. Login to: [LuCI](192.168.1.1/cgi-bin/luci/)
+2. Navigate to: ***Network > DHCP and DNS ***
+3. Click the hyperlinc-tab: **|Advanced Settings|**
 3. Scrol down and fill out: **DNS Server Port** to be: `5353`
 
 # Set (update persistent) kresd policy
 
-1. \# `echo "policy.add(policy.suffix(policy.FORWARD('127.0.0.1@5353'),  policy.todnames({'lan'})))" >> /etc/kresd.custom.conf` (persisting reboots and updates, as it is custom).
+1. `root@turris:~# echo "policy.add(policy.suffix(policy.FORWARD('127.0.0.1@5353'),  policy.todnames({'lan'})))" >> /etc/kresd.custom.conf` (persisting reboots and updates, as it is custom).
 
-2. `# cp /etc/config/resolver /etc/config/resolver.bak && vim /etc/config/resolver` and replace line 22:
+2. `root@turris:~# cp /etc/config/resolver /etc/config/resolver.bak && vim /etc/config/resolver` and replace line 22:
 
   ```
   #option include_config '/tmp/kresd.custom.conf'
@@ -21,7 +22,7 @@
 
   Note the removal of the hash-tag!
 
-3. `# cp /etc/init.d/kresd /etc/init.d/kresd.bak && vim /etc/init.d/kresd` and move the lines (134 & 135):
+3. `root@turris:~# cp /etc/init.d/kresd /etc/init.d/kresd.bak && vim /etc/init.d/kresd` and move the lines (134 & 135):
 
   ```
   # include custom kresd config
@@ -45,6 +46,6 @@
   if [ "$do_forward" = "1" ] ; then
   ```
 
-4. `# /etc/init.d/kresd restart && /etc/init.d/dnsmasq restart`
+4. `root@turris:~# /etc/init.d/kresd restart && /etc/init.d/dnsmasq restart`
 
 Also see: https://forum.turris.cz/t/dnsmasq-lan-domain-while-still-using-knot-resolver/1253/29
