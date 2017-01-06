@@ -6,9 +6,9 @@
 6. root@turris:~# `lxc-attach -n <containername>`
 4. root@container:~# `passwd`
 5. root@container:~# `<password>` (2x)
-5. `root@container:~# vim /home/<username>/.ssh/authorized_keys` and populate it.
-6. `root@container:~# exit`
-7. `root@turris:~# lxc-stop -n <containername>`
-8. `root@turris:~# btrfs subvolume  snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS./<containername>/<date-time(iso_8601)_note>`
-9. `add private key (referral) to your ssh client of choice (e.g. putty on Microsoft Windows)
+5. root@container:~# `vim /home/<username>/.ssh/authorized_keys` and populate it with your *public* RSA-keys.
+6. root@container:~# `exit`
+7. root@turris:~# `lxc-stop -n <containername>`
+8. root@turris:~# `btrfs subvolume  snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS./<containername>/<date-time(iso_8601)_note>`
+9. Add private key (referral) to your ssh client of choice (e.g. putty on Microsoft Windows)
 10. Connect via ssh
