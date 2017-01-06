@@ -3,9 +3,9 @@
 
 Welcome to the (unofficial) [Turris-Omnia](https://omnia.turris.cz/en/) (router) documentation repository!
 
-Make sure to contribute; branch soon, branch often!
+Make sure to contribute (branch soon, branch often)!
 
-Please branch-off from and make pull-requests for the `dev` (development) branch only.
+From/to the **development** branch please.
 
 Copyright 2016 Willem Oosting
 
