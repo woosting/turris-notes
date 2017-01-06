@@ -7,7 +7,7 @@
 > `root@turris:~# /usr/lib/opkg/info/wget.postinst; /usr/lib/opkg/info/less.postinst`
 
 # Automated (by calling the postinst after every update)
-1. `# vim /etc/updater/hook_postupdate/04_hooks.sh`
+1. `root@turris:~# vim /etc/updater/hook_postupdate/04_hooks.sh`
 2. Populate it with:
 
   ```
