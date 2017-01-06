@@ -1,4 +1,4 @@
-To provide guests with a DNS (they will not be able to reach the Omnia itself after following the [openWRT (LuCi) recipe for making a guest WiFi network](https://wiki.openwrt.org/doc/recipes/guest-wlan-webinterface):
+To provide guests with a DNS (they will not be able to reach the Omnia itself after following the [openWRT (LuCI) recipe for making a guest WiFi network](https://wiki.openwrt.org/doc/recipes/guest-wlan-webinterface):
 
 0. Login to: [LuCI](192.168.1.1/cgi-bin/luci/)
 1. Navigate to: ***Network > Interfaces***
