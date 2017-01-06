@@ -5,7 +5,7 @@ Welcome to the (unofficial) [Turris-Omnia](https://omnia.turris.cz/en/) (router)
 
 Make sure to contribute (branch soon, branch often)!
 
-From/to the **development** branch please.
+Work on (branch from / pull request to) **development** please.
 
 Copyright 2016 Willem Oosting
 
