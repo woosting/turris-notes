@@ -5,7 +5,7 @@
 3. Click: **|Advanced Settings|**
 3. Scrol down and fill out: **DNS Server Port** to be: `5353`
 
-# Set (update persistent) kresd policy
+# Set (update persisting) kresd policy
 
 1. root@turris:~# `echo "policy.add(policy.suffix(policy.FORWARD('127.0.0.1@5353'),  policy.todnames({'lan'})))" >> /etc/kresd.custom.conf` (persisting reboots and updates, as it is custom).
 
