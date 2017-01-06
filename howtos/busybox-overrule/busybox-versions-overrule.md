@@ -2,7 +2,7 @@
 1. `root@turris:~# /usr/lib/opkg/info/wget.postinst`
 2. `root@turris:~# /usr/lib/opkg/info/less.postinst`
 
-> Alternatively (ste[ 1 and 2 in one command):
+> ALTERNATIVELY (step 1 and 2 in one command):
 >
 > `root@turris:~# /usr/lib/opkg/info/wget.postinst; /usr/lib/opkg/info/less.postinst`
 
