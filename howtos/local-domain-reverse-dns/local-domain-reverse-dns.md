@@ -22,7 +22,7 @@
   option include_config '/etc/kresd.custom.conf'
   ```
     
-  > ALTERNATIVELY (in one command):
+  > ALTERNATIVELY (step 3 in one command):
   >
   > `root@turris:~# sed -i 's/#option include_config '\''\/tmp\/kresd\.custom\.conf'\''/option include_config '\''\/etc\/kresd.custom.conf'\''/g' /etc/config/resolver`
 
