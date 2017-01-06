@@ -1,4 +1,8 @@
-When running: user@container:~$ `sshfs -o idmap=user <user>@37.97.132.144:/remote/path /mnt/mountpoint` lxc-containers print: `fuse: device not found, try 'modprobe fuse' first`. Although this would be good advice on a regular (OS on metal) system it shoud _not_ be executed inside lxc-containers, but on the host system (assumption: lxc-kernel useage related).
+When running: user@container:~$ `sshfs -o idmap=user <user>@37.97.132.144:/remote/path /mnt/mountpoint`.
+
+lxc-containers print: `fuse: device not found, try 'modprobe fuse' first`.
+
+Although this would be good advice on a regular (OS on metal) system it shoud _not_ be executed inside lxc-containers, but on the host system (assumption: lxc-kernel useage related).
 o:
 
 So do the following instead:
