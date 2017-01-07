@@ -1,6 +1,20 @@
-# Issue (bug?)
+# Workarounds:
 
-## SUSPECTED ROOT CAUSE:
+1. Use another container template (tested to work with 'Ubuntu Yakkety').
+
+2. Use NSF3 (on server) and:
+
+ - Turn off idmapd loading after installing 'nfs-common' (on the client):
+    - root@container:~# `apt-get install nfs-common` (will semi-fail)
+    - root@container:~# `vim /etc/default/nfs-common`
+    - change `NEED_IDMAPD=` into `NEED_IDMAPD=no`
+    - root@container:~# `apt-get upgrade -y`
+
+ - [Change UIDs](https://askubuntu.com/questions/16700/how-can-i-change-my-own-user-id#16719) correspondingly with server if needed (*user can not be logged in during this change*):
+    - root@container:~# `usermod -u <NEW_UID> <USERNAME>`
+    - root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
+
+# SUSPECTED ROOT CAUSE:
 
 **idmapd not starting** (suspected to be an (systemd) upstart issue in the Debian instance resulting from a faulty template).
 
@@ -68,21 +82,5 @@ The command: `rpc.idmapd -fv` (from the bug-report) prints:
     rpc.idmapd: main: fcntl(/run/rpc_pipefs/nfs): Invalid argument
 
 This (taken from the output above): `Opening /proc/net/rpc/nfs4.nametoid/channel failed: errno 2 (No such file or directory)` seems to be related as the (marked) part indeed does not exist: /proc/net/rpc/`nfs4.nametoid/channel`
-
-# Workarounds:
-
-1. Use another container template (tested to work with 'Ubuntu Yakkety').
-
-2. Use NSF3 (on server) and:
-
- - Turn off idmapd loading after installing 'nfs-common' (on the client):
-    - root@container:~# `apt-get install nfs-common` (will semi-fail)
-    - root@container:~# `vim /etc/default/nfs-common`
-    - change `NEED_IDMAPD=` into `NEED_IDMAPD=no`
-    - root@container:~# `apt-get upgrade -y`
-
- - [Change UIDs](https://askubuntu.com/questions/16700/how-can-i-change-my-own-user-id#16719) correspondingly with server if needed (*user can not be logged in during this change*):
-    - root@container:~# `usermod -u <NEW_UID> <USERNAME>`
-    - root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
 
 > REFERENCE: https://forum.turris.cz/t/nfs-common-failing-in-lxc-container-debian-template/2689/8
