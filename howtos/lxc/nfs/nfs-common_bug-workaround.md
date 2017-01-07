@@ -16,7 +16,7 @@
 
 # SUSPECTED ROOT CAUSE:
 
-**idmapd not starting** (suspected to be an (systemd) upstart issue in the Debian instance resulting from a faulty template).
+**idmapd not starting** (suspected to be a (systemd) upstart issue in the Debian instance resulting from a faulty template).
 
 Summary of [the discussion: 'nfs-common failing in LXC container (Debian template)'](https://forum.turris.cz/t/nfs-common-failing-in-lxc-container-debian-template/2689/8):
 
