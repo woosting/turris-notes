@@ -22,7 +22,7 @@
     option include_config '/etc/kresd.custom.conf'
     ```
     
-    > ALTERNATIVE (from cli instead of manual editing): root@turris:~# `cp /etc/config/resolver /etc/config/resolver.bak && sed -i 's/#option include_config '\''\/tmp\/kresd\.custom\.conf'\''/option include_config '\''\/etc\/kresd\/custom.conf'\''/g' /etc/config/resolver`
+    > ALTERNATIVE (cli instead of vim editing): root@turris:~# `cp /etc/config/resolver /etc/config/resolver.bak && sed -i 's/#option include_config '\''\/tmp\/kresd\.custom\.conf'\''/option include_config '\''\/etc\/kresd\/custom.conf'\''/g' /etc/config/resolver`
 
 3. root@turris:~# `/etc/init.d/kresd restart && /etc/init.d/dnsmasq restart`
 
