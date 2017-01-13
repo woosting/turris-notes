@@ -22,35 +22,9 @@
     option include_config '/etc/kresd.custom.conf'
     ```
     
-    > ALTERNATIVE (step 2 from cli instead of manual editing): root@turris:~# `cp /etc/config/resolver /etc/config/resolver.bak && sed -i 's/#option include_config '\''\/tmp\/kresd\.custom\.conf'\''/option include_config '\''\/etc\/kresd\/custom.conf'\''/g' /etc/config/resolver`
+    > ALTERNATIVE (from cli instead of manual editing): root@turris:~# `cp /etc/config/resolver /etc/config/resolver.bak && sed -i 's/#option include_config '\''\/tmp\/kresd\.custom\.conf'\''/option include_config '\''\/etc\/kresd\/custom.conf'\''/g' /etc/config/resolver`
 
-4. root@turris:~# `cp /etc/init.d/kresd /etc/init.d/kresd.bak`
-
-5. root@turris:~# `vim /etc/init.d/kresd` and move the lines 134 & 135:
-
-    ```
-    # include custom kresd config
-    include_custom_config
-    ```
-  
-    ...right above line 122 & 123:
-  
-    ```
-    config_get_bool do_forward "$section" forward_upstream 1
-    if [ "$do_forward" = "1" ] ; then
-    ```
-  
-    ... resulting in:
-  
-    ```
-    # include custom kresd config
-    include_custom_config
-    config_get_bool do_forward "$section" forward_upstream 1
-  
-    if [ "$do_forward" = "1" ] ; then
-    ```
-
-6. root@turris:~# `/etc/init.d/kresd restart && /etc/init.d/dnsmasq restart`
+3. root@turris:~# `/etc/init.d/kresd restart && /etc/init.d/dnsmasq restart`
 
     > REFERENCE: https://forum.turris.cz/t/dnsmasq-lan-domain-while-still-using-knot-resolver/1253
 
