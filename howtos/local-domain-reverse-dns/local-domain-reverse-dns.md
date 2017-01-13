@@ -17,7 +17,7 @@
     ...with (note the removal of the hash-tag!):
 
     ```
-    option include_config '/etc/kresd.custom.conf'
+    option include_config '/etc/kresd/custom.conf'
     ```
     
     > ALTERNATIVE (cli instead of vim editing): root@turris:~# `cp /etc/config/resolver /etc/config/resolver.bak && sed -i 's/#option include_config '\''\/tmp\/kresd\.custom\.conf'\''/option include_config '\''\/etc\/kresd\/custom.conf'\''/g' /etc/config/resolver`
