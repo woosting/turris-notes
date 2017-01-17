@@ -6,7 +6,9 @@ Issue:After adding mSata disk as per tutorial video:- Basic web setting shows 2 
 
 Solution:jump into ssh ( putty ) log into your omnia IP ( 192.168.1.1 ? :smiley: ) with root as user and password.
 
-Backup file: cp /etc/config/wireless /etc/config/wireless.oldEdit file:  vim /etc/config/wirelessand remove block related to radio1, underneath is also radio2 just rename it to radio1 where it says radio2 ( two places ) Save, reboot and enjoy working configuration via web interface again :wink:
+Backup file: cp /etc/config/wireless /etc/config/wireless.old
+
+Edit file:  vim /etc/config/wirelessand remove block related to radio1, underneath is also radio2 just rename it to radio1 where it says radio2 ( two places ) Save, reboot and enjoy working configuration via web interface again :wink:
 
 > REFERENCE: https://forum.turris.cz/t/info-small-thing-to-do-after-adding-msata-ssd/1831
 
