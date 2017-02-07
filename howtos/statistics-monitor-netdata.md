@@ -1,8 +1,14 @@
-In order to update the package list, install-, and start the netdata monitor on the Turris Omnia:
+# Netdata
 
-- `opkg update && opkg install netdata && netdata`
+## Installation
 
-As a result it presents various statisical overviews on: `http://192.168.1.1:19999` (surf to it with your webbrowser of choice).
+In order to update the package list, install-, and start the netdata monitor on the Turris Omnia: **root@turris:~#** `opkg update && opkg install netdata && netdata`
+
+## Usage
+
+Open your browser of choice and surf to the Omnia's address on port 19999: `http://192.168.1.1:19999`
+
+## References
 
 Adapted from (Turris omnia forum): [Monitoring Omnia with NetData][1]
 
