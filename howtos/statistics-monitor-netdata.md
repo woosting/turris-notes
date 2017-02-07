@@ -1,6 +1,6 @@
 In order to monitor the Turris Omnia's statisics:
 
-1. `opkg update && opkg install netdata && netdata`
+- `opkg update && opkg install netdata && netdata`
 
 As a result it presents various overviews on: `http://192.168.1.1:19999`
 
