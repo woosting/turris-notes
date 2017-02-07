@@ -1,5 +1,7 @@
 # Netdata
 
+Net data is a statistics network data monitor, having a sleek webinterface.
+
 ## Installation
 
 In order to update the package list, install-, and start the netdata monitor on the Turris Omnia:
