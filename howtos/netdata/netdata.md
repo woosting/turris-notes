@@ -27,4 +27,4 @@ Adapted from (Turris omnia forum): [Monitoring Omnia with NetData][1]
 <!-- REFERENCES -->
 
 [1]:https://forum.turris.cz/t/monitoring-omnia-with-netdata/3179/9
-[2]:https://forum.turris.cz/uploads/default/original/2X/4/4585d87a776714b5769ad65eef8e034f560f041b.png
+[2]:netdata.png
