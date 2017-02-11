@@ -1,4 +1,4 @@
-# Install pihole
+# Install Pi-hole (router level add blocker)
 
 > Hyperlinks used in this how-to are pointing to the LuCi interface of the open source Turris Omnia router).
 
