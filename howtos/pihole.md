@@ -40,8 +40,8 @@ $ curl -sSL https://install.pi-hole.net | bash
   3. Note the password at the end of the installation wizard (although it can be changed later, should you ever forget it: `pihole -a -p new_password`).
 8. Check if the Pi-hole server is properly running by logging into it; e.g `http://192.168.1.2/admin` (using the password noted in the previous step).
 9. Change [DHCP settings] of the LAN interface to use the Pi-hole as a primary DNS, and the router's as its fallback:
-  - Turris omnia: 
-    1. **DHCP Server > Advanced Settings**
+  - Turris Omnia: 
+    1. **[LuCi][3] > DHCP Server > Advanced Settings**
     2. **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
     3. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
 > Alternatively configure clients themselves to use the pihole as their DNS server statically.
@@ -51,4 +51,4 @@ $ curl -sSL https://install.pi-hole.net | bash
 
 [1]:http://192.168.1.1/cgi-bin/luci/admin/network/dhcp
 [2]:http://192.168.1.1/cgi-bin/luci/admin/services/lxc
-[3]:http://192.168.1.1/cgi-bin/luci/admin/network/network/lan
+[3]:http://192.168.1.1/cgi-bin/luci/admin/network/network
