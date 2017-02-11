@@ -3,7 +3,7 @@
 > Hyperlinks used in this how-to are pointing to the LuCi interface of the open source Turris Omnia router).
 
 1. Create a **new LXC container** (this how-to assumes either: _Ubuntu xenial_ or _Debian Jessie_).
-2. Have your router assign a **static IP address** to the LXC container in its [DHCP server configuration settings][1]:
+2. Have your [router's DHCP server][1] assign a **static IP address** to the LXC container:
     1. **Hostname**: `pihole`.
     2. **MAC-Address**: found at:
       - Regular LXC: The lxc container's configuration file (this needs to be tested!!!).
