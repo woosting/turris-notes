@@ -30,13 +30,14 @@ $ lxc-attach -n pihole
   ```shell
 $ apt-get install -y ca-certificates curl
 ```
-7. Install pi-hole (ncurses installer):
+7. Install pi-hole (via an ncurses installer wizard):
 
   ```shell
 $ curl -sSL https://install.pi-hole.net | bash
 ```
   1. When asked for (ipv4) nameservers, select `custom` and enter your router's ip (typically: `192.168.1.1`).
-  2. Note the password at the end of the installation wizard (although it can be changed later too if you ever forget it: `pihole -a -p new_password`).
+  2. Other than that use common sence (applying defaults where unsure).
+  3. Note the password at the end of the installation wizard (although it can be changed later too if you ever forget it: `pihole -a -p new_password`).
 8. Check if the pi-hole server is properly running by logging into it; e.g `http://192.168.1.2/admin` (using the password noted in the previous step).
 9. Change [DHCP settings] of the LAN interface to use the Pi-hole as a primary DNS and the router's as its fallback:
   - Turris omnia: 
