@@ -35,9 +35,9 @@ $ apt-get install -y ca-certificates curl
   ```shell
 $ curl -sSL https://install.pi-hole.net | bash
 ```
-  1. When asked for (ipv4) nameservers, select `custom` and enter `192.168.1.1` (Turris Omnia IP).
-  2. Note the password at the end of the installation wizard (although it can be changed later too if you forget with the command: `pihole -a -p new_password`).
-8. Check if it's running `http://192.168.1.2/admin` (the password is generated just after the installation).
+  1. When asked for (ipv4) nameservers, select `custom` and enter your router's ip (typically: `192.168.1.1`).
+  2. Note the password at the end of the installation wizard (although it can be changed later too if you ever forget it: `pihole -a -p new_password`).
+8. Check if the pi-hole server is properly running `http://192.168.1.2/admin` (log in with the password noted in the previous step).
 9. Change DHCP settings of the LAN interface to use the pihole as primary DNS, router as fallback:
   1. Browse to: `http://192.168.1.1/cgi-bin/luci/admin/network/network/lan`
   2. Navigate to: **DHCP Server > Advanced Settings**
