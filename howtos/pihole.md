@@ -46,8 +46,6 @@ $ curl -sSL https://install.pi-hole.net | bash
 10. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
 11. Clear browser cashes if nessesary.
 
-> Alternatively configure clients themselves to use the pihole as their DNS server statically.
-
 ENJOY ADD-FREE BROWSING
 
 But please consider donating registering for a subscriptions at content providers you deem worthy of your money!
@@ -56,6 +54,8 @@ But please consider donating registering for a subscriptions at content provider
 # Notes
 
 Hyperlinks used in this how-to are pointing to the LuCi interface of the open source Turris Omnia router.
+
+Alternatively configure clients to use the pihole as their DNS server statically instead of step 9 to 11 if preferred.
 
 
 <!-- REFERENCES -->
