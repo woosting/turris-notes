@@ -7,8 +7,8 @@
     1. **Hostname**: `pihole`.
     2. **MAC-Address**: found at:
       - Regular LXC: The lxc container's configuration file (this remains to be tested!!!).
-      - Turris Omnia LXC: [Services/Containers][2] **> container dropdown more > configure >** search for `lxc.network.hwaddr`.
-    3. **IPv4-Address**: Anyone in your network suiting your situation (e.g. `192.168.1.2`).
+      - Turris Omnia LXC: [Services/Containers][2] > container dropdown: **more** > **configure** > search for **lxc.network.hwaddr**.
+    3. **IPv4-Address**: Any address available in your network topology (e.g. `192.168.1.2`).
         
 4. Make the containers **startup automatically**:
 
