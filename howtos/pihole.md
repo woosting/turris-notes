@@ -51,4 +51,4 @@ $ curl -sSL https://install.pi-hole.net | bash
 
 <!-- REFERENCES -->
 [1]:http://192.168.1.1/cgi-bin/luci/admin/network/dhcp
-[1]:http://192.168.1.1/cgi-bin/luci/admin/services/lxc
+[2]:http://192.168.1.1/cgi-bin/luci/admin/services/lxc
