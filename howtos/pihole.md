@@ -50,7 +50,7 @@ $ curl -sSL https://install.pi-hole.net | bash
 
 ENJOY ADD-FREE BROWSING
 
-But please: consider donating / taking a subscriptions for content providers you deem worthy of your money!
+But please consider donating registering for a subscriptions at content providers you deem worthy of your money!
 
 
 # Notes
