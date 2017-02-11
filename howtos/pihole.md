@@ -1,5 +1,9 @@
+# Install pihole
+
+> Hyperlinks used in this how-to are pointing to the LuCi interface of the open source Turris Omnia router).
+
 1. Create a **new LXC container** (this how-to is based on either: Ubuntu xenial or Debian Jessie).
-2. Have your router assign a **static IP address** to the LXC container in its DHCP server configuration settings (`http://192.168.1.1/cgi-bin/luci/admin/network/dhcp` for Turris Omnia):
+2. Have your router assign a **static IP address** to the LXC container in its [DHCP server configuration settings][1]:
     1. **Hostname**: `pihole`.
     2. **MAC-Address**: found at:
       - Regular LXC: The lxc container's configuration file (this needs to be tested!!!).
@@ -42,3 +46,8 @@ $ curl -sSL https://install.pi-hole.net | bash
   3. **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
 > Alternatively configure clients statically to use the pihole as their DNS server.
 10. Renew your existing IP/leases on your (desktop) clients (to apply the new DNS servers), if not configured statically (as previously mentioned as an alternative method).
+
+
+
+<!-- REFERENCES -->
+[1]:http://192.168.1.1/cgi-bin/luci/admin/network/dhcp
