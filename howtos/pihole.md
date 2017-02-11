@@ -43,8 +43,12 @@ $ curl -sSL https://install.pi-hole.net | bash
   - Turris Omnia: 
     1. **[LuCi][3] > Interface (usually: LAN) > Edit > DHCP Server > Advanced Settings**
     2. **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
-    3. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
+10. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
+11. Clear browser cashes if nessesary.
+
 > Alternatively configure clients themselves to use the pihole as their DNS server statically.
+
+ENJOY ADD-FREE BROWSING (but please: consider donating / taking a subscriptions for content providers you deem worthy of your money)!
 
 
 <!-- REFERENCES -->
