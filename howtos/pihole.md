@@ -1,6 +1,6 @@
 # Install Pi-hole (router level add blocker)
 
-> Hyperlinks used in this how-to are pointing to the LuCi interface of the open source Turris Omnia router).
+## Procedure
 
 1. Create a new LXC container (this how-to assumes either: _Ubuntu xenial_ or _Debian Jessie_).
 2. Have your [router's DHCP server][1] assign a static IP address to the LXC container:
@@ -48,7 +48,14 @@ $ curl -sSL https://install.pi-hole.net | bash
 
 > Alternatively configure clients themselves to use the pihole as their DNS server statically.
 
-ENJOY ADD-FREE BROWSING (but please: consider donating / taking a subscriptions for content providers you deem worthy of your money)!
+ENJOY ADD-FREE BROWSING
+
+But please: consider donating / taking a subscriptions for content providers you deem worthy of your money!
+
+
+# Notes
+
+Hyperlinks used in this how-to are pointing to the LuCi interface of the open source Turris Omnia router.
 
 
 <!-- REFERENCES -->
