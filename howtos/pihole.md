@@ -2,10 +2,11 @@
 2. Assign a static IP address for the LXC container at:
   - Regular LXC: ???
   - Turris Omnia LXC: `http://192.168.1.1/cgi-bin/luci/admin/network/dhcp`
-3. Create a new static entry for the LXC container e.g.
-  1. Hostname: `pihole`.
-  2. MAC-Address: can be found at: `http://192.168.1.1/cgi-bin/luci/admin/services/lxc` **> container dropdown more > configure >** search for the phrase `lxc.network.hwaddr`.
-  3. IPv4-Address: whatever suits your situation (e.g. `192.168.1.2`).
+  
+      Create a new static entry for the LXC container e.g.
+        1. Hostname: `pihole`.
+        2. MAC-Address: can be found at: `http://192.168.1.1/cgi-bin/luci/admin/services/lxc` **> container dropdown more > configure >** search for the phrase `lxc.network.hwaddr`.
+        3. IPv4-Address: whatever suits your situation (e.g. `192.168.1.2`).
 4. Either:
   - Regular LXC: Add the line `lxc.start.auto = 1` to the container's configuration file.
   - Turris omnia: Edit configuration file `/etc/config/lxc-auto` as for example:
