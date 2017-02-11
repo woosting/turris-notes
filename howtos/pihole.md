@@ -30,7 +30,7 @@ $ lxc-attach -n pihole
   ```shell
 $ apt-get install -y ca-certificates curl
 ```
-7. Install and configure pi-hole itself (via an ncurses installer wizard):
+7. Install and configure Pi-hole itself (via an ncurses installer wizard):
 
   ```shell
 $ curl -sSL https://install.pi-hole.net | bash
@@ -55,7 +55,7 @@ But please consider donating registering for a subscriptions at content provider
 
 Hyperlinks used in this how-to are pointing to the LuCi interface of the open source Turris Omnia router.
 
-Alternatively configure clients to use the pihole as their DNS server statically instead of step 9 to 11 if preferred.
+Alternatively configure clients to use the Pi-hole as their DNS server statically instead of step 9 to 11 if preferred.
 
 
 <!-- REFERENCES -->
