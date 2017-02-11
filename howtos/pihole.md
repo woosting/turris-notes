@@ -7,6 +7,7 @@
 4. Either:
   - Regular LXC: Add the line `lxc.start.auto = 1` to the container's configuration file.
   - Turris omnia: Edit configuration file `/etc/config/lxc-auto` as for example:
+
     ```shell
     config container
       option name pihole
@@ -14,15 +15,18 @@
     ```
     Every container configured here will get started at the boot and each of them will be correctly halted during the shutdown. Set timeout option to specify how much time in seconds do the containers have to gracefully shutdown before being killed. The default value is 300.
 5. Boot the container and gain entrance:
+
   ```shell
 $ lxc-start -n pihole
 $ lxc-attach -n pihole
 ```
 6. Install base packages required to get the installer going:
+
   ```shell
 $ apt-get install -y ca-certificates curl
 ```
 7. Install pi-hole (ncurses installer):
+
   ```shell
 $ curl -sSL https://install.pi-hole.net | bash
 ```
