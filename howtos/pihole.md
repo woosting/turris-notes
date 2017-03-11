@@ -18,7 +18,7 @@
       option name pihole
       option timeout 30
     ```
-    Containers configured here will get started at the boot and each of them will be correctly halted during the shutdown. Set timeout option to specify how much time in seconds do the containers have to gracefully shutdown before being killed (by default: 300s.).
+    Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
 5. Boot the container and gain entrance:
 
   ```shell
@@ -40,7 +40,7 @@ $ curl -sSL https://install.pi-hole.net | bash
   3. Note the password at the end of the installation wizard (although it can be changed later, should you ever forget it: `pihole -a -p new_password`).
 8. Check if the Pi-hole server is properly running by logging into it; e.g `http://192.168.1.2/admin` (using the password noted in the previous step).
 9. Change [DHCP settings] of the LAN interface to use the Pi-hole as a primary DNS, and the router's as its fallback:
-  - Turris Omnia: 
+  - Turris Omnia:
     1. **[LuCi][3] > Interface (usually: LAN) > Edit > DHCP Server > Advanced Settings**
     2. **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
 10. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
