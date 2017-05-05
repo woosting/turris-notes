@@ -1,4 +1,4 @@
-# mSATA SSD assmebly
+# mSATA SSD assembly
 
 Application: Internal storage for LXC containers.
 
