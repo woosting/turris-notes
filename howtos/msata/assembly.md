@@ -22,11 +22,11 @@ Application: Internal storage for LXC containers.
 
 ## Functional check
 
-1. Login to SSH and take a look at the output of the mount command. You should see your /dev/sdaX partition mounted on /srv/lxc, the place where router installs LXC containers by default. Also you should see it using LuCI under the menu System.
+Login to SSH and take a look at the output of the mount command. You should see your /dev/sdaX partition mounted on /srv/lxc, the place where router installs LXC containers by default. Also you should see it using LuCI under the menu System.
 
 ## Application (example)
 
-1. Create LXC containers as described in the [LXC howto][2] (are created in `/srv/lxc`, to which the mSATA drive is now mounted).
+Create LXC containers as described in the [LXC howto][2] (are created in `/srv/lxc`, to which the mSATA drive is now mounted).
 
 
 <!-- REFERENCES -->
