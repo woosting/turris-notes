@@ -19,8 +19,14 @@ Application: Internal storage for LXC containers.
           option target '/srv/lxc'
       ```
     3. Save the file and restart the router.
-5. Login to SSH and take a look at the output of the mount command. You should see your /dev/sdaX partition mounted on /srv/lxc, the place where router installs LXC containers by default. Also you should see it using LuCI under the menu System.
-6. Create LXC containers as described in the [LXC howto][2] (are created in `/srv/lxc`, to which the mSATA drive is now mounted).
+
+## Functional check
+
+1. Login to SSH and take a look at the output of the mount command. You should see your /dev/sdaX partition mounted on /srv/lxc, the place where router installs LXC containers by default. Also you should see it using LuCI under the menu System.
+
+## Application (example)
+
+1. Create LXC containers as described in the [LXC howto][2] (are created in `/srv/lxc`, to which the mSATA drive is now mounted).
 
 
 <!-- REFERENCES -->
