@@ -4,7 +4,7 @@
 2. Browse to: [LuCI](192.168.1.1/cgi-bin/luci/) ***> Services > LXC Containers***
 5. Create a container with the same name (as the just created btrfs subvolume).
 6. Start the container (either in LuCI or by: `lxc-start -n <container-name>`.
-7. root@turris:~# `~/import -c <containernaam> -u <username>` .. grab coffee ..
+7. root@turris:~# `cimport -c <containernaam> -u <username>` .. grab coffee ..
 8. root@turris:~# `lxc-attach -n <containername>`
 9. root@container:~# `passwd`
 10. root@container:~# `<password>` (2x)
