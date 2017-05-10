@@ -1,8 +1,10 @@
+# Container installation procedure
+
 1. root@turris:~# `btrfs subvolume create /srv/lxc/<containername>`
 2. Login to: [LuCI](192.168.1.1/cgi-bin/luci/)
 3. Navigate to: ***Services > LXC Containers***
 5. Create the container having the same name as the just created btrfs subvolume.
-6. Start the container (eithrr in LuCI or by: `lxc-start -n <container-name>`.
+6. Start the container (either in LuCI or by: `lxc-start -n <container-name>`.
 7. root@turris:~# `~/import -c <containernaam> -u <username>` .. grab coffee ..
 8. root@turris:~# `lxc-attach -n <containername>`
 9. root@container:~# `passwd`
@@ -15,3 +17,18 @@
 16. Add private key (referral) to your ssh client of choice (e.g. putty on Microsoft Windows)
 17. root@turris:~# `lxc-start -n <containername>`
 18. Connect via ssh
+
+# Optionally
+
+root@turris:~# `vim /etc/config/lxc-auto` and adapt the file as such:
+
+```
+config container
+        option name my_first_vm
+        option timeout 60
+        
+config container
+        option name my_second_vm
+        option timeout 120
+```
+> Note: Set timeout option to specify how much time in seconds do the containers have to gracefully shutdown before being killed. The default value is 300. 
