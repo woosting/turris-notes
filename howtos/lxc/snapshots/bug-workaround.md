@@ -1,7 +1,7 @@
 # Container installation procedure
 
 1. root@turris:~# `btrfs subvolume create /srv/lxc/<containername>`
-2. Browse to: [LuCI](192.168.1.1/cgi-bin/luci/) ***Services > LXC Containers***
+2. Browse to: [LuCI](192.168.1.1/cgi-bin/luci/) ***> Services > LXC Containers***
 5. Create the container having the same name as the just created btrfs subvolume.
 6. Start the container (either in LuCI or by: `lxc-start -n <container-name>`.
 7. root@turris:~# `~/import -c <containernaam> -u <username>` .. grab coffee ..
