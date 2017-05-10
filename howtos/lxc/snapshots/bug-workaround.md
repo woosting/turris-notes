@@ -18,7 +18,8 @@
 17. root@turris:~# `lxc-start -n <containername>`
 18. Connect via ssh
 
-# Optionally
+
+## Optionally
 
 root@turris:~# `vim /etc/config/lxc-auto` and adapt the file as such:
 
@@ -32,3 +33,11 @@ config container
         option timeout 120
 ```
 > Note: Set timeout option to specify how much time in seconds do the containers have to gracefully shutdown before being killed. The default value is 300. 
+
+
+# References
+
+[LXC [Project: Turris]][1]
+
+<!-- REFERENCES -->
+[1]:https://www.turris.cz/doc/en/howto/lxc
