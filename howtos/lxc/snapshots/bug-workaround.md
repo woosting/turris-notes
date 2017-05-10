@@ -15,7 +15,7 @@
 15. root@turris:~# `btrfs subvolume  snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
 17. Start the container (either in LuCI or by: `root@turris:~# lxc-start -n <container-name>`.
 16. Add private key (referral) to your ssh client of choice (e.g. putty on Microsoft Windows).
-18. Connect via ssh using the user's account (not root).
+18. Connect via ssh using the user's account (not root; you can `su` to super user from within the container).
 
 
 ## Optionally
