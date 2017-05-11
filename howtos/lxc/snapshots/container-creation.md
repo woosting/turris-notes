@@ -1,4 +1,4 @@
-# Container installation procedure
+# Container creation procedure
 
 1. root@turris:~# `btrfs subvolume create /srv/lxc/<containername>`
 2. Browse to: [LuCI](192.168.1.1/cgi-bin/luci/) ***> Services > LXC Containers***
@@ -19,6 +19,8 @@
 
 
 ## Optionally
+
+### Automatically start the container at Turris Omnia (re)boot
 
 root@turris:~# `vim /etc/config/lxc-auto` and adapt the file as such:
 
