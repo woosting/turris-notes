@@ -14,7 +14,7 @@
     ```
     #option include_config '/tmp/kresd.custom.conf'
     ```
-    ...with (note the removal of the hash-tag!):
+    ...with (note the removal of the hash-tag AND replace the dot (.) after kresd with a forwardslash (/)!):
 
     ```
     option include_config '/etc/kresd/custom.conf'
