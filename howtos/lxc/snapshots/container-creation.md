@@ -9,7 +9,7 @@
 8. root@turris:~# `lxc-attach -n <containername>`
 9. root@container:~# `passwd`
 10. root@container:~# `<password>` (2x)
-11. root@container:~# `vim /home/<username>/.ssh/authorized_keys` and populate it with your *public* RSA-keys.
+11. root@container:~# `vim /home/<username>/.ssh/authorized_keys` and populate it with your **public** RSA-keys.
 12. root@container:~# `hostnamectl set-hostname <new-hostname>`
 12. root@container:~# `exit`
 13. Stop the container, via either:
