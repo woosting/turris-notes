@@ -16,7 +16,8 @@
     lxc-start -n <container-name>
     ```
     
-    > ALternatively - Using LuCi
+    > Alternatively (via web-gui):
+    
     > [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
     
 7. root@turris:~# `cimport -c <containernaam> -u <username>` .. grab coffee ..
