@@ -1,6 +1,6 @@
 # Container creation procedure
 
-1. **root@turris:~#** `btrfs subvolume create /srv/lxc/<containername>`
+1. **root@turris:~#**
 ```shell
 btrfs subvolume create /srv/lxc/<containername>
 ```
