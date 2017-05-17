@@ -1,4 +1,4 @@
-# Container creation procedure
+# Container creation
 
 1. Create the BTRFS subvolume that will to host the container:
 
