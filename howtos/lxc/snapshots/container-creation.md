@@ -1,6 +1,6 @@
 # Container creation procedure
 
-1. Create the BTRFS subvolume to host the container:
+1. Create the BTRFS subvolume to host the container `# btrfs subvolume create /srv/lxc/<containername>`:
     ```
     root@turris:~# btrfs subvolume create /srv/lxc/containername
     Create subvolume '/srv/lxc/containername'
