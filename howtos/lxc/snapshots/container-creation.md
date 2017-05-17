@@ -19,11 +19,14 @@
 17. Start the container, via either:
     - [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
     - root@turris:~# `lxc-start -n <container-name>`
-16. Add private key (referral) to your ssh client of choice (e.g. putty on Microsoft Windows).
-18. Connect via ssh using the user's account (not root; you can `su` to super user from within the container).
-
 
 ## Optionally
+
+### RSA-key based login
+
+1. Add private key (referral) to your ssh client of choice (e.g. putty on Microsoft Windows).
+2. Connect via ssh using the user's account (not root; you can `su` to super user from within the container).
+
 
 ### Automatically start the container at Turris Omnia (re)boot
 
