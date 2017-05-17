@@ -9,7 +9,6 @@
 8. root@turris:~# `lxc-attach -n <containername>`
 9. root@container:~# `passwd`
 10. root@container:~# `<password>` (2x)
-11. root@container:~# `vim /home/<username>/.ssh/authorized_keys` and populate it with your **public** RSA-keys.
 12. root@container:~# `hostnamectl set-hostname <new-hostname>`
 12. root@container:~# `exit`
 13. Stop the container, via either:
@@ -23,9 +22,9 @@
 ## Optionally
 
 ### RSA-key based login
-
-1. Add private key (referral) to your ssh client of choice (e.g. putty on Microsoft Windows).
-2. Connect via ssh using the user's account (not root; you can `su` to super user from within the container).
+1. root@container:~# `vim /home/<username>/.ssh/authorized_keys` and populate it with your **public** RSA-keys.
+2. Add private key (referral) to your ssh client of choice (e.g. putty on Microsoft Windows).
+3. Connect via ssh using the user's account (not root; you can `su` to super user from within the container).
 
 
 ### Automatically start the container at Turris Omnia (re)boot
