@@ -31,15 +31,15 @@
 
 - root@turris:~# `vim /etc/config/lxc-auto` and adapt the file as such:
 
-```
-config container
-        option name my_first_vm
-        option timeout 60
-        
-config container
-        option name my_second_vm
-        option timeout 120
-```
+    ```
+    config container
+            option name my_first_vm
+            option timeout 60
+
+    config container
+            option name my_second_vm
+            option timeout 120
+    ```
 > Note: Set timeout option to specify how much time in seconds do the containers have to gracefully shutdown before being killed. The default value is 300. 
 
 
