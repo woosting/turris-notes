@@ -3,8 +3,7 @@
 1. Create the BTRFS subvolume that will to host the container (as root):
 
     ```
-    root@turris:~# btrfs subvolume create /srv/lxc/containername
-    Create subvolume '/srv/lxc/containername'
+    btrfs subvolume create /srv/lxc/<containername>
     ```
     
 2. Create a container with the same name as the created btrfs subvolume via: [LuCI](192.168.1.1/cgi-bin/luci/) > *Services > LXC Containers*.
