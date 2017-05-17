@@ -13,7 +13,7 @@
 3. Start the container (as root):
 
     ```shell
-    lxc-start -n <container-name>
+    lxc-start -n <containername>
     ```
     
     > Alternatively (via web-gui):
