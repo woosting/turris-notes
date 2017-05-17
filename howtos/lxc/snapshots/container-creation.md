@@ -40,7 +40,7 @@
             option name my_second_vm
             option timeout 120
     ```
-> Note: Set timeout option to specify how much time in seconds do the containers have to gracefully shutdown before being killed. The default value is 300. 
+    > Note: Set timeout option to specify how much time in seconds do the containers have to gracefully shutdown before being killed. The default value is 300. 
 
 
 # References
