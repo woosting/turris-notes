@@ -29,7 +29,7 @@
 
 ### Automatically start the container at Turris Omnia (re)boot
 
-root@turris:~# `vim /etc/config/lxc-auto` and adapt the file as such:
+- root@turris:~# `vim /etc/config/lxc-auto` and adapt the file as such:
 
 ```
 config container
