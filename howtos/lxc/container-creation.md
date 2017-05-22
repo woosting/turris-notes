@@ -12,17 +12,21 @@
     
     > This tutorial assumes a Debian 8 (Jessie) containter.
 
-3. Start the container (as root):
+3. Start the container:
 
     ```shell
     lxc-start -n <containername>
     ```
     
     > Alternatively (via web-gui):
-    >
     > [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
     
-7. root@turris:~# `cimport -c <containernaam> -u <username>` .. grab coffee ..
+7. Populate the container with basic tooling and create a regular user:
+
+    ```shell
+    cimport -c <containernaam> -u <username>`
+    ``` .. grab coffee ..
+    
 8. root@turris:~# `lxc-attach -n <containername>`
 9. root@container:~# `passwd`
 10. root@container:~# `<password>` (2x)
