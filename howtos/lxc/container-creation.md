@@ -29,9 +29,9 @@
     cimport -c <containernaam> -u <username>`
     ```
     
-    > Info: [Cimport](https://github.com/woosting/cimports) is a three-stage cascading script. The first stage copies an initialisation script into the container. In the second that script is executed to downloads a [base-install](https://github.com/woosting/baseInst) script. During the third stage the base-install script actually populates the container with basic applications (using apt) and creates the user with the requested username.
+    > Info: [Cimport](https://github.com/woosting/cimports) is a three-stage cascading script. In the first stage an initialisation script is copied into the container. During the second that script is executed to downloads a [base-install](https://github.com/woosting/baseInst) script. During the third stage the base-install script actually populates the container with basic applications (using apt) and creates the user with the requested username.
     
-    Grab a cup of coffee...
+    Grab a cup of coffee (this may take up to over 10 minutes)...
     
 8. Enter the container:
 
