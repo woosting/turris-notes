@@ -18,7 +18,7 @@
     lxc-start -n <containername>
     ```
     
-    > **Alternative** Via web-gui: [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
+    > **Alternative:** Via web-gui: [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
     
 7. Populate the container with basic tooling and create a regular user:
 
@@ -44,8 +44,18 @@
     <password>
     ```
     
-12. root@container:~# `hostnamectl set-hostname <new-hostname>`
-12. root@container:~# `exit`
+12. Chante the hostname of the container:
+
+    ```shell
+    hostnamectl set-hostname <new-hostname>
+    ```
+    
+12. Leave the container:
+
+    ```shell
+    exit
+    ```
+
 13. Stop the container, via either:
     - [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
     - root@turris:~# `lxc-stop -n <containername>`
