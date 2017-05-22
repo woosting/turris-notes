@@ -29,7 +29,7 @@
     
     > [Cimport](https://github.com/woosting/cimports) is a 2 stage cascading script. The first stage copies in a container initialisation script. Which is then executed from within the container to actually populate the container and create the user.
     
-    .. grab coffee ..
+    Grab a coffee... 10 to 15 minutes waiting time (assuming  reasonable hardware).
     
 8. root@turris:~# `lxc-attach -n <containername>`
 9. root@container:~# `passwd`
