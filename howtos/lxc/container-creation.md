@@ -3,7 +3,7 @@
 1. Create the BTRFS subvolume that will to host the container:
 
     ```shell
-    sudo btrfs subvolume create /srv/lxc/<containername>
+    btrfs subvolume create /srv/lxc/<containername>
     ```
     
 2. Create a container with the same name as the created btrfs subvolume:
