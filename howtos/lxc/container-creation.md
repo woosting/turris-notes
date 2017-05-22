@@ -19,7 +19,7 @@
     ```shell
     lxc-start -n <containername>
     ```
-    Or via the web-gui:
+    or via the web-gui:
     
     *[LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
     
