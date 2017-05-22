@@ -18,7 +18,7 @@
     lxc-start -n <containername>
     ```
     
-    > **Alternative (via web-gui):** [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
+    > **Alternative** Via web-gui: [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
     
 7. Populate the container with basic tooling and create a regular user:
 
