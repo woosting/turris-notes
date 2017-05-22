@@ -10,7 +10,7 @@
 
     [LuCI](192.168.1.1/cgi-bin/luci/) > *Services > LXC Containers*
     
-    > This tutorial assumes a Debian 8 (Jessie) containter.
+    This tutorial assumes a Debian 8 (Jessie) containter.
 
 3. Start the container:
 
