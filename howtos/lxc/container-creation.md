@@ -18,7 +18,7 @@
     lxc-start -n <containername>
     ```
     
-    > Alternatively (via web-gui): [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
+    > **Alternative (via web-gui):** [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
     
 7. Populate the container with basic tooling and create a regular user:
 
@@ -26,7 +26,7 @@
     cimport -c <containernaam> -u <username>`
     ```
     
-    > [Cimport](https://github.com/woosting/cimports) is a 2 stage cascading script. The first stage copies in a container initialisation script. Which is then executed from within the container to actually populate the container and create the user.
+    > **Info:** [Cimport](https://github.com/woosting/cimports) is a 2 stage cascading script. The first stage copies in a container initialisation script. Which is then executed from within the container to actually populate the container and create the user.
     
     Grab a cup of coffee...
     
