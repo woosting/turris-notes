@@ -31,9 +31,20 @@
     
     Grab a coffee... 10 to 15 minutes waiting time (assuming  reasonable hardware).
     
-8. root@turris:~# `lxc-attach -n <containername>`
-9. root@container:~# `passwd`
-10. root@container:~# `<password>` (2x)
+8. Enter the container:
+
+    ```shell
+    lxc-attach -n <containername>
+    ```
+    
+9. Change the password of the logged in user (root):
+
+    ```shell
+    passwd
+    <password>
+    <password>
+    ```
+    
 12. root@container:~# `hostnamectl set-hostname <new-hostname>`
 12. root@container:~# `exit`
 13. Stop the container, via either:
