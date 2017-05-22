@@ -24,10 +24,10 @@
 7. Populate the container with basic tooling and create a regular user:
 
     ```shell
-    [cimport](https://github.com/woosting/cimports) -c <containernaam> -u <username>`
+    cimport -c <containernaam> -u <username>`
     ```
     
-    > cimport is a 2 stage cascading script. The first stage copies in a container initialisation script. Which is then executed from within the container to actually populate the container and create the user.
+    > [Cimport](https://github.com/woosting/cimports) is a 2 stage cascading script. The first stage copies in a container initialisation script. Which is then executed from within the container to actually populate the container and create the user.
     
     .. grab coffee ..
     
