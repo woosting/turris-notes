@@ -29,7 +29,7 @@
     cimport -c <containernaam> -u <username>`
     ```
     
-    > **Info:** [Cimport](https://github.com/woosting/cimports) is a 2 stage cascading script. The first stage copies in a container initialisation script. Which is then executed from within the container to actually populate the container and create the user.
+    > Info: [Cimport](https://github.com/woosting/cimports) is a two-stage cascading script. The first stage copies in a container initialisation script. Which is then executed from within the container to actually populate the container and create the user.
     
     Grab a cup of coffee...
     
@@ -47,7 +47,7 @@
     <password>
     ```
     
-12. Chante the hostname of the container:
+12. Change the hostname of the container:
 
     ```shell
     hostnamectl set-hostname <new-hostname>
