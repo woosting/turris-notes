@@ -8,18 +8,20 @@
     
 2. Create a container with the same name as the created btrfs subvolume:
 
-    [LuCI](192.168.1.1/cgi-bin/luci/) > *Services > LXC Containers*
+    *[LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
     
     > Note: This tutorial assumes a Debian 8 (Jessie) containter.
 
 3. Start the container:
 
+    Via the (SSH) CLI:
+
     ```shell
     lxc-start -n <containername>
     ```
-    or alternatively via [LuCI](192.168.1.1/cgi-bin/luci/) (the web-gui):
+    Or via the web-gui:
     
-    *> Services > LXC Containers*
+    *[LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
     
 7. Populate the container with basic tooling and create a regular user:
 
