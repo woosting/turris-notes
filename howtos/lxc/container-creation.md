@@ -1,14 +1,16 @@
 # Container creation
 
-1. Create the BTRFS subvolume that will to host the container (as root):
+1. Create the BTRFS subvolume that will to host the container:
 
     ```shell
-    btrfs subvolume create /srv/lxc/<containername>
+    sudo btrfs subvolume create /srv/lxc/<containername>
     ```
     
 2. Create a container with the same name as the created btrfs subvolume:
 
     [LuCI](192.168.1.1/cgi-bin/luci/) > *Services > LXC Containers*
+    
+    > This tutorial assumes a Debian 8 (Jessie) containter.
 
 3. Start the container (as root):
 
