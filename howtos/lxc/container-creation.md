@@ -77,8 +77,34 @@
     ```
 	> *Alternative: Via web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
+## Optionals
 
-## Optionally
+### Create migratable backup
+
+1. Install the script (if not done allready):
+
+	1. Download the lxc-backup script:
+    ```shell
+    wget https://raw.githubusercontent.com/woosting/lxc-backup/master/lxc-backup.sh -P </path/to/scripts>
+	```
+
+	2. Make the script executable:
+    ```shell
+    chmod 755 </path/to/scripts>/lxc-backup.sh
+	```
+
+	3. Place a symbolic link in the path:
+    ```shell
+    ln -s </path/to/scripts>/lxc-backup.sh /usr/bin/lxc-backup.sh
+	```
+
+2. Execute the script:
+    ```shell
+    lxc-backup.sh
+	```
+
+
+
 
 ### RSA-key based login
 1. root@container:~# `vim /home/<username>/.ssh/authorized_keys` and populate it with your **public** RSA-keys.
