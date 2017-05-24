@@ -84,19 +84,19 @@
 1. Install the script (if not done allready):
 
 	1. Download the lxc-backup script:
-    ```shell
-    wget https://raw.githubusercontent.com/woosting/lxc-backup/master/lxc-backup.sh -P </path/to/scripts>
-	```
+        ```shell
+        wget https://raw.githubusercontent.com/woosting/lxc-backup/master/lxc-backup.sh -P </path/to/scripts>
+        ```
 
 	2. Make the script executable:
-    ```shell
-    chmod 755 </path/to/scripts>/lxc-backup.sh
-	```
+        ```shell
+        chmod 755 </path/to/scripts>/lxc-backup.sh
+        ```
 
 	3. Place a symbolic link in the path:
-    ```shell
-    ln -s </path/to/scripts>/lxc-backup.sh /usr/bin/lxc-backup.sh
-	```
+        ```shell
+        ln -s </path/to/scripts>/lxc-backup.sh /usr/bin/lxc-backup.sh
+        ```
 
 2. Execute the script:
     ```shell
