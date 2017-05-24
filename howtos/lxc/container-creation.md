@@ -13,7 +13,7 @@
     ```
 	> *Alternatives:*
 	> 1. *Interactive shell script: `lxc-create -n <containername> -t download -P </path/to/container/directory>`*
-	> 2. *Web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers > [+Create]*
+	> 2. *Web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
 3. Start the container:
 
@@ -21,12 +21,12 @@
     lxc-start -n <containername>
     ```
 
-    > *Alternative: By web-gui: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers > [> Start]*
+    > *Alternative: By web-gui: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
 7. Populate the container with basic tooling and create a regular user:
 
     ```shell
-    cimport -c <containernaam> -u <username>`
+    cimport -c <containernaam> -u <username>
     ```
     
     > Info: [Cimport](https://github.com/woosting/cimports) is a three-stage cascading script. In the first stage an initialisation script is copied into the container. During the second that script is executed to downloads a [base-install](https://github.com/woosting/baseInst) script. During the third stage the base-install script actually populates the container with basic applications (using apt) and creates the user with the requested username.
