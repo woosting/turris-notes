@@ -5,16 +5,14 @@
     ```shell
     btrfs subvolume create /srv/lxc/<containername>
     ```
-  
+
 2. **Create a container with the same name as the created btrfs subvolume** by issuing:
 
 	```shell
     lxc-create -n syncthing -t download -P /srv/lxc/ -- -d Debian -r Jessie -a armv7l
     ```
 
-    *Alternate: Use [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
-    
-    *Note: This tutorial assumes a Debian 8 (Jessie) containter.*
+    *Alternate: Use the web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
 3. Start the container:
 
