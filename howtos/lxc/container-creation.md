@@ -11,9 +11,9 @@
 	```shell
     lxc-create -n <containername> -t download -P </path/to/container/directory> -- -d <distribution> -r <release> -a <architecture>
     ```
-	> *Alternatives:*
-	> 1. *By interactive shell script: `lxc-create -n <containername> -t download -P </path/to/container/directory>`*
-	> 2. *By web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers.**
+	*Alternatives:*
+	1. *Interactive shell script: `lxc-create -n <containername> -t download -P </path/to/container/directory>`*
+	2. *Web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers.**
 
 3. Start the container:
 
@@ -21,7 +21,7 @@
     lxc-start -n <containername>
     ```
 
-    > *Alternative: By web-gui: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
+    *Alternative: By web-gui: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
 7. Populate the container with basic tooling and create a regular user:
 
