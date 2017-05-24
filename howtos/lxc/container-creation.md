@@ -12,7 +12,7 @@
     lxc-create -n syncthing -t download -P /srv/lxc/ -- -d Debian -r Jessie -a armv7l
     ```
 
-    *Alternative: Use the web-interface [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
+    **Alternative:** Use the web-interface [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers
 
 3. Start the container:
 
