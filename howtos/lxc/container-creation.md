@@ -12,8 +12,8 @@
     lxc-create -n <containername> -t download -P </path/to/container/directory> -- -d <distribution> -r <release> -a <architecture>
     ```
 	> *Alternatives:*
-	> 1. *Interactive shell script: `lxc-create -n <containername> -t download -P </path/to/container/directory>`*
-	> 2. *Web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
+	> 1. *Via interactive shell script: `lxc-create -n <containername> -t download -P </path/to/container/directory>`*
+	> 2. *Via web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
 3. Start the container:
 
@@ -21,7 +21,7 @@
     lxc-start -n <containername>
     ```
 
-    > *Alternative: By web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
+    > *Alternative: Via web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
 7. Populate the container with basic tooling and create a regular user:
 
@@ -62,7 +62,7 @@
     ```shell
     lxc-stop -n <containername>
     ```
-	> *Alternative: Web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
+	> *Alternative: Via web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
 15. root@turris:~# `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
 17. Start the container, via either:
