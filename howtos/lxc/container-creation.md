@@ -11,7 +11,7 @@
 	```shell
     lxc-create -n <containername> -t download -P </path/to/container/directory> -- -d <distribution> -r <release> -a <architecture>
     ```
-	> Alternative: Use the custom fields are unknown use an the interactive shell script: `lxc-create -n <containername> -t download -P </path/to/container/directory>`
+	> Alternative: Use the interactive shell script: `lxc-create -n <containername> -t download -P </path/to/container/directory>`
 
     > Alternative: Use the web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers
 
