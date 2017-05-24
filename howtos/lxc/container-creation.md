@@ -1,19 +1,19 @@
 # Container creation
 
-1. **Create the BTRFS subvolume that will host the container** by issuing:
+1. Create the BTRFS subvolume that will host the container:
 
     ```shell
     btrfs subvolume create /srv/lxc/<containername>
     ```
 
-2. **Create a container with the same name as the created btrfs subvolume** by issuing:
+2. Create a container with the same name as the created btrfs subvolume:
 
 	```shell
     lxc-create -n <containername> -t download -P </path/to/container/directory> -- -d <distribution> -r <release> -a <architecture>
     ```
 	> Alternatives:
-	> 1. Use the interactive shell script: `lxc-create -n <containername> -t download -P </path/to/container/directory>`  e.g. when unsure what parameters to use.
-	> 2. Use the web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers
+	> 1. By interactive shell script: `lxc-create -n <containername> -t download -P </path/to/container/directory>`
+	> 2. By web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers.
 
 3. **Start the container** by issuing:
 
