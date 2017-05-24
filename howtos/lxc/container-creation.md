@@ -1,11 +1,9 @@
 # Container creation
 
-1. **Create the BTRFS subvolume that will host the container** by issuing: `btrfs subvolume create /srv/lxc/<containername>`:
+1. **Create the BTRFS subvolume that will host the container** by issuing:
 
     ```shell
-    root@server:~# btrfs subvolume create /srv/lxc/syncthing
-    Create subvolume '/srv/lxc/syncthing'
-    root@server:~#
+    btrfs subvolume create /srv/lxc/<containername>
     ```
   
 2. Create a container with the same name as the created btrfs subvolume:
