@@ -23,7 +23,7 @@
 
     > *Alternative: Via web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
-7. Populate the container with basic tooling and create a regular user:
+4. Populate the container with basic tooling and create a regular user:
 
     ```shell
     cimport -c <containernaam> -u <username>
@@ -33,41 +33,50 @@
     
     Grab a cup of coffee (this may take over 10 minutes)...
     
-8. Enter the container:
+5. Enter the container:
 
     ```shell
     lxc-attach -n <containername>
     ```
     
-9. Change the password of the logged in user (root) by an interactive script:
+6. Change the password of the logged in user (root) by an interactive script:
 
     ```shell
     passwd
     ```
     
-12. Change the hostname of the container:
+7. Change the hostname of the container:
 
     ```shell
     hostnamectl set-hostname <new-hostname>
     ```
     
-12. Leave the container:
+8. Leave the container:
 
     ```shell
     exit
     ```
 
-13. Stop the container:
+9. Stop the container:
 
     ```shell
     lxc-stop -n <containername>
     ```
 	> *Alternative: Via web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
 
-15. root@turris:~# `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
-17. Start the container, via either:
-    - [LuCI](192.168.1.1/cgi-bin/luci/) *> Services > LXC Containers*
-    - root@turris:~# `lxc-start -n <container-name>`
+10. Make a BTRFS snapshot of the container:
+
+    ```shell
+    btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>
+    ```
+
+9. Start the container:
+
+    ```shell
+    lxc-start -n <containername>
+    ```
+	> *Alternative: Via web-interface: [LuCI](192.168.1.1/cgi-bin/luci/) > Services > LXC Containers*
+
 
 ## Optionally
 
