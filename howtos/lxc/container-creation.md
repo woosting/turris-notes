@@ -103,13 +103,13 @@
 
     > SITUATIONAL: In case you do not have a target directory yet:
     >
-    > 1. Create a snapshot container aggregation directory (if it does not exist yet):
+    > 1. Create a container-snapshot aggregation directory (if it does not exist yet):
     >
     >     ```shell
     >     mkdir /srv/lxc/SNAPSHOTS
     >     ```
     >
-    > 2. Create a specific container snapshot directory per (if it does not exist yet):
+    > 2. Create a specific container-snapshot directory per container (if it does not exist yet):
     >
     >     ```shell
     >     mkdir /srv/lxc/SNAPSHOTS/<containername>
