@@ -25,51 +25,21 @@
 ## Populate the container
 
 1. Populate the container with basic tooling and create a regular user (may take over 10 minutes):`cimport -c <containername> -u <username>`
-
-    > SITUATIONAL: In case you do not have the script yet:
+    > In case you do not have the script yet:
     > 1. Download the script (create the target directory if required): `git clone https://github.com/woosting/cimports.git /srv/scripts/cimports`
     > 3. Make the script executable: `chmod 755 /srv/scripts/cimports/cimport.sh`
     > 4. Place a symbolic link in the path to make it available from any location: `ln -s /srv/scripts/cimports/cimport.sh /usr/bin/cimport`
-
-1. Enter the container:
-
-    ```shell
-    lxc-attach -n <containername>
-    ```
-
-2. Change the password of root by an interactive script (follow instructions on screen):
-
-    ```shell
-    passwd
-    ```
-
-3. Change the hostname of the container:
-
-    ```shell
-    hostnamectl set-hostname <new-hostname>
-    ```
-
-4. Leave the container:
-
-    ```shell
-    exit
-    ```
+2. Enter the container: `lxc-attach -n <containername>`
+3. Change the password of root by an interactive script (follow instructions on screen): `passwd`
+4. Change the hostname of the container: `hostnamectl set-hostname <new-hostname>`
+5. Leave the container: `exit`
 
 ## Backup the container
 
-1. Stop the container:
+1. Stop the container: `lxc-stop -n <containername>`
+2. Make a BTRFS snapshot of the container: `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
 
-    ```shell
-    lxc-stop -n <containername>
-    ```
-
-2. Make a BTRFS snapshot of the container:
-
-    ```shell
-    btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>
-    ```
-
-    > SITUATIONAL: In case you don't have a snapshot target directory yet:
+    > In case you don't have a snapshot target directory yet:
     >
     > 1. Create a directory to aggrecontainer-snapshot aggregation directory (if it does not exist yet):
     >
