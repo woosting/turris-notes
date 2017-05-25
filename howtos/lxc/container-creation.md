@@ -11,7 +11,7 @@
 2. Create a container with the same name as the created btrfs subvolume:
 
     ```shell
-    lxc-create -n <containername> -t download -P </path/to/container/directory> -- -d <distribution> -r <release> -a <architecture>
+    lxc-create -n <containername> -t download -P /srv/lxc/ -- -d <distribution> -r <release> -a <architecture>
     ```
 
 3. Start the container:
@@ -25,34 +25,34 @@
 1. Populate the container with basic tooling and create a regular user (may take over 10 minutes):
 
     ```shell
-    cimport -c <containernaam> -u <username>
+    cimport -c <containername> -u <username>
     ```
 
     > SITUATIONAL: In case you do not have the script yet:
-    > 
+    >
     > 1. Download the script:
-    > 
+    >
     >     ```shell
-    >     git clone https://github.com/woosting/cimports.git </path/to/scripts/>cimports
+    >     git clone https://github.com/woosting/cimports.git /srv/scripts/cimports
     >     ```
     >
     > 3. Make the script executable:
-    > 
+    >
     >     ```shell
-    >     chmod 755 </path/to/scripts/>cimports/cimport.sh
+    >     chmod 755 /srv/scripts/cimports/cimport.sh
     >     ```
     > 4. Place a symbolic link in the path to make it available from any location:
-    > 
+    >
     >     ```shell
-    >     ln -s </path/to/scripts/>cimports/cimport.sh /usr/bin/cimport
+    >     ln -s /srv/scripts/cimports/cimport.sh /usr/bin/cimport
     >     ```
 
 1. Enter the container:
-  
+
     ```shell
     lxc-attach -n <containername>
     ```
-  
+
 2. Change the password of root by an interactive script (follow instructions on screen):
 
     ```shell
@@ -64,7 +64,7 @@
     ```shell
     hostnamectl set-hostname <new-hostname>
     ```
-  
+
 4. Leave the container:
 
     ```shell
@@ -94,19 +94,19 @@
     > SITUATIONAL: In case you do not have the script yet:
     >
     > 1. Download the script:
-    > 
+    >
     >     ```shell
     >     git clone https://github.com/woosting/lxc-backup.git /srv/scripts/lxc-backup
     >     ```
-    > 
+    >
     > 3. Make the script executable:
-    > 
+    >
     >     ```shell
     >     chmod 755 /srv/scripts/lxc-backup/lxc-backup.sh
     >     ```
     >     
     > 4. Place a symbolic link in the path to make it available from any location:
-    > 
+    >
     >    ```shell
     >    ln -s /srv/scripts/lxc-backup/lxc-backup.sh /usr/bin/lxc-backup
     >    ```
@@ -132,7 +132,7 @@
     ```shell
     vim /home/<username>/.ssh/authorized_keys
     ```
-  
+
 2. Populate it with the **public** RSA-keys you wish to grand access to the container (change with your keys):
 
     ```shell
