@@ -47,7 +47,7 @@
 
 2. Make a migratable tarfile (create the target directory if required): `tar --numeric-owner -czvf /srv/lxc/BACKUPS/<yyyymmdd>t<hhmm>-<containername>.tar.gz -C /srv/lxc/ <containername>`
 
-3. ...Grab a cup of coffee (±15 minutes)...
+3. ...Grab a cup of coffee (±5 minutes)...
 
 4. Start the container: `lxc-start -n <containername>`
 
