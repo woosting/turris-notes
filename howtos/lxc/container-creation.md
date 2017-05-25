@@ -22,14 +22,13 @@
 
 ## 2. Populate the container
 
-1. Populate the container with basic tooling and create a regular user:
+1. Populate the container with basic tooling and create a regular user (may take over 10 minutes):
 
   ```shell
   cimport -c <containernaam> -u <username>
   ```
 
-  Info: Grab a cup of coffee (this may take over 10 minutes)..
-
+  > SITUATIONAL: In case you do not have the script yet
   > 1. Download the script should it not be present yet:
   >     ```shell
   >     git clone https://github.com/woosting/cimports.git </path/to/scripts/>cimports
