@@ -71,7 +71,9 @@
     exit
     ```
 
-## Snapshot the container
+## Backup the container
+
+### Snapshot the container
 
 1. Stop the container:
 
@@ -85,15 +87,7 @@
     btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>
     ```
 
-9. Start the container:
-
-    ```shell
-    lxc-start -n <containername>
-    ```
-
-## Create migratable backup
-
-- Execute the script (may take over 20 minutes):
+3. Make a migratable tarfile (may take over 20 minutes):
 
     ```shell
     lxc-backup
@@ -118,6 +112,12 @@
     >    ```shell
     >    ln -s /srv/scripts/lxc-backup/lxc-backup.sh /usr/bin/lxc-backup
     >    ```
+
+9. Start the container:
+
+    ```shell
+    lxc-start -n <containername>
+    ```
 
 ## Optional
 
