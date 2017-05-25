@@ -73,8 +73,6 @@
 
 ## Backup the container
 
-### Snapshot the container
-
 1. Stop the container:
 
     ```shell
