@@ -20,44 +20,22 @@
 
 1. Create the BTRFS subvolume that will host the container: `btrfs subvolume create /srv/lxc/<containername>`
 
-2. Create a container with the same name as the created btrfs subvolume:
+2. Create a container with the same name as the created btrfs subvolume: `lxc-create -n <containername> -t download -P /srv/lxc/ -- -d <distribution> -r <release> -a <architecture>`
 
-    ```shell
-    lxc-create -n <containername> -t download -P /srv/lxc/ -- -d <distribution> -r <release> -a <architecture>
-    ```
-
-3. Start the container:
-
-    ```shell
-    lxc-start -n <containername>
-    ```
+3. Start the container: `lxc-start -n <containername>`
 
 ## Populate the container
 
-1. Populate the container with basic tooling and create a regular user (may take over 10 minutes):
-
-    ```shell
-    cimport -c <containername> -u <username>
-    ```
+1. Populate the container with basic tooling and create a regular user (may take over 10 minutes):`cimport -c <containername> -u <username>`
 
     > SITUATIONAL: In case you do not have the script yet:
     >
-    > 1. Download the script (create the target directory if required):
+    > 1. Download the script (create the target directory if required): `git clone https://github.com/woosting/cimports.git /srv/scripts/cimports`
     >
-    >     ```shell
-    >     git clone https://github.com/woosting/cimports.git /srv/scripts/cimports
-    >     ```
+    > 3. Make the script executable: `chmod 755 /srv/scripts/cimports/cimport.sh`
     >
-    > 3. Make the script executable:
-    >
-    >     ```shell
-    >     chmod 755 /srv/scripts/cimports/cimport.sh
-    >     ```
-    > 4. Place a symbolic link in the path to make it available from any location:
-    >
-    >     ```shell
-    >     ln -s /srv/scripts/cimports/cimport.sh /usr/bin/cimport
-    >     ```
+    > 4. Place a symbolic link in the path to make it available from any location: `ln -s /srv/scripts/cimports/cimport.sh /usr/bin/cimport`
+
 
 1. Enter the container:
 
