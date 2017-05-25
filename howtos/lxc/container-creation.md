@@ -93,7 +93,7 @@
 
 ## Create migratable backup
 
-1. Execute the script (may take over 20 minutes):
+- Execute the script (may take over 20 minutes):
 
     ```shell
     lxc-backup
