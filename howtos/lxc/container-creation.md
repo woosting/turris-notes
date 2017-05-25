@@ -27,13 +27,9 @@
 1. Populate the container with basic tooling and create a regular user (may take over 10 minutes):`cimport -c <containername> -u <username>`
 
     > SITUATIONAL: In case you do not have the script yet:
-    >
     > 1. Download the script (create the target directory if required): `git clone https://github.com/woosting/cimports.git /srv/scripts/cimports`
-    >
     > 3. Make the script executable: `chmod 755 /srv/scripts/cimports/cimport.sh`
-    >
     > 4. Place a symbolic link in the path to make it available from any location: `ln -s /srv/scripts/cimports/cimport.sh /usr/bin/cimport`
-
 
 1. Enter the container:
 
