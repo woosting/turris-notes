@@ -29,16 +29,13 @@
 
 6. Leave the container: `exit`
 
-## Backup the container
+## Snapshot the container
 
 1. Stop the container: `lxc-stop -n <containername>`
 
 2. Make a BTRFS snapshot of the container (create the target directory if required): `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
 
 3. Start the container: `lxc-start -n <containername>`
-
-
-## Situational
 
 ## Backup the container
 
@@ -50,6 +47,8 @@
 
 4. Start the container: `lxc-start -n <containername>`
 
+
+## Situational
 
 ### Make the container start at (re)boot
 
