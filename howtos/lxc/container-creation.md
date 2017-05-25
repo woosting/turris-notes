@@ -30,7 +30,7 @@
 
     > SITUATIONAL: In case you do not have the script yet:
     >
-    > 1. Download the script:
+    > 1. Download the script (create the target directory if required):
     >
     >     ```shell
     >     git clone https://github.com/woosting/cimports.git /srv/scripts/cimports
@@ -93,7 +93,7 @@
 
     > SITUATIONAL: In case you do not have the script yet:
     >
-    > 1. Download the script:
+    > 1. Download the script  (create the target directory if required):
     >
     >     ```shell
     >     git clone https://github.com/woosting/lxc-backup.git /srv/scripts/lxc-backup
@@ -145,7 +145,7 @@
     exit
     ```
 
-3. Instruct your ssh client of choice (e.g. putty on Microsoft Windows) to use the corresponding private when connecting to the container.
+3. Instruct your ssh client (e.g. putty on Windows) to use the corresponding private key when connecting to the container.
 
 4. Connect via ssh using the user's account (not root; you can `su` to super user from within the container if required).
 
