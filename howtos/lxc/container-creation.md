@@ -72,7 +72,7 @@
 
 ## 4. Snapshot the container
 
-9. Stop the container:
+1. Stop the container:
 
   ```shell
   lxc-stop -n <containername>
