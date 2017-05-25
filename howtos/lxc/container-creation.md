@@ -22,7 +22,7 @@
 
 ## Populate the container (automated)
 
-1. Populate the container with basic tooling and create a regular user (may take over 10 minutes):
+Populate the container with basic tooling and create a regular user (may take over 10 minutes):
 
     ```shell
     cimport -c <containernaam> -u <username>
