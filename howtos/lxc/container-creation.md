@@ -39,6 +39,7 @@
 1. Stop the container: `lxc-stop -n <containername>`
 2. Make a BTRFS snapshot of the container (create the target directory if required): `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
 3. Make a migratable tarfile (create the target directory if required): `tar --numeric-owner -czvf /src/lxc/BACKUPS/<yyyymmdd>t<hhmm>-<containername>.tar.gz -C /srv/lxc/ <containername>`
+4. Grab a cup of coffee (15 minutes)
 4. Start the container: `lxc-start -n <containername>`
 
 ## Optional
