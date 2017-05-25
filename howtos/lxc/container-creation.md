@@ -107,27 +107,26 @@
     >     
     > 4. Place a symbolic link in the path to make it available from any location:
     >
-    >    ```shell
-    >    ln -s /srv/scripts/lxc-backup/lxc-backup.sh /usr/bin/lxc-backup
-    >    ```
+    >     ```shell
+    >     ln -s /srv/scripts/lxc-backup/lxc-backup.sh /usr/bin/lxc-backup
+    >     ```
 
 9. Start the container:
 
-    ```shell
-    lxc-start -n <containername>
-    ```
+      ```shell
+      lxc-start -n <containername>
+      ```
 
 ## Optional
 
 ### RSA-key based login
 
-5. Enter the container:
-
+1. Enter the container:
     ```shell
     lxc-attach -n <containername>
     ```
 
-1. Edit your authorized_keys file:
+2. Edit your authorized_keys file:
 
     ```shell
     vim /home/<username>/.ssh/authorized_keys
