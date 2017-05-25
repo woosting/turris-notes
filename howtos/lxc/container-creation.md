@@ -102,16 +102,19 @@
     > SITUATIONAL: In case you do not have the script yet:
     >
     > 1. Download the script:
+    > 
     >     ```shell
     >     git clone https://github.com/woosting/lxc-backup.git /srv/scripts/lxc-backup
     >     ```
     > 
     > 3. Make the script executable:
+    > 
     >     ```shell
     >     chmod 755 /srv/scripts/lxc-backup/lxc-backup.sh
     >     ```
     >     
     > 4. Place a symbolic link in the path to make it available from any location:
+    > 
     >    ```shell
     >    ln -s /srv/scripts/lxc-backup/lxc-backup.sh /usr/bin/lxc-backup
     >    ```
