@@ -18,11 +18,7 @@
 
 ## Create clean container
 
-1. Create the BTRFS subvolume that will host the container:
-
-    ```shell
-    btrfs subvolume create /srv/lxc/<containername>
-    ```
+1. Create the BTRFS subvolume that will host the container: `btrfs subvolume create /srv/lxc/<containername>`
 
 2. Create a container with the same name as the created btrfs subvolume:
 
@@ -109,7 +105,7 @@
     >     mkdir /srv/lxc/SNAPSHOTS
     >     ```
     >
-    > 2. Create a specific container-snapshot directory per container (if it does not exist yet):
+    > 2. Create a specific container-snapshot directory:
     >
     >     ```shell
     >     mkdir /srv/lxc/SNAPSHOTS/<containername>
@@ -123,7 +119,7 @@
 
     > SITUATIONAL: In case you don't have a backup target directory yet:
     >
-    >  1. Create a directory to aggrecontainer-snapshot aggregation directory (if it does not exist yet):
+    >  Create the container-backups aggregation directory:
     >
     >     ```shell
     >     mkdir /srv/lxc/BACKUPS
