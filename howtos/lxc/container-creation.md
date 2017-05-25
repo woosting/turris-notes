@@ -1,6 +1,6 @@
 # Container creation
 
-## 1. Create clean container
+## Create clean container
 
 1. Create the BTRFS subvolume that will host the container:
 
@@ -20,7 +20,7 @@
     lxc-start -n <containername>
     ```
 
-## 2. Populate the container (automated)
+## Populate the container (automated)
 
 1. Populate the container with basic tooling and create a regular user (may take over 10 minutes):
 
@@ -45,7 +45,7 @@
     >    ```
 
 
-## 3. Populate the container (manual finetuning)
+## Populate the container (manual finetuning)
 
 5. Enter the container:
   
@@ -71,7 +71,7 @@
     exit
     ```
 
-## 4. Snapshot the container
+## Snapshot the container
 
 - Stop the container:
 
@@ -91,7 +91,7 @@
     lxc-start -n <containername>
     ```
 
-## 5. Create migratable backup
+## Create migratable backup
 
 1. Execute the script (may take over 20 minutes):
 
