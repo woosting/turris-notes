@@ -4,9 +4,9 @@
 
 1. Create the BTRFS subvolume that will host the container:
 
-  ```shell
-  btrfs subvolume create /srv/lxc/<containername>
-  ```
+    ```shell
+    btrfs subvolume create /srv/lxc/<containername>
+    ```
 
 2. Create a container with the same name as the created btrfs subvolume:
 
