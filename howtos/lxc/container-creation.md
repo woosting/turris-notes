@@ -47,25 +47,25 @@
 
 ## Populate the container (manual finetuning)
 
-5. Enter the container:
+1. Enter the container:
   
     ```shell
     lxc-attach -n <containername>
     ```
   
-6. Change the password of root by an interactive script (follow instructions on screen):
+2. Change the password of root by an interactive script (follow instructions on screen):
 
     ```shell
     passwd
     ```
 
-7. Change the hostname of the container:
+3. Change the hostname of the container:
 
     ```shell
     hostnamectl set-hostname <new-hostname>
     ```
   
-8. Leave the container:
+4. Leave the container:
 
     ```shell
     exit
