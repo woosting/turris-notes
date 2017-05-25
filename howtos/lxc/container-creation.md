@@ -101,6 +101,20 @@
     btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>
     ```
 
+    > SITUATIONAL: In case you do not have a target directory yet:
+    >
+    > 1. Create a snapshot container aggregation directory (if it does not exist yet):
+    >
+    >     ```shell
+    >     mkdir /srv/lxc/SNAPSHOTS
+    >     ```
+    >
+    > 2. Create a specific container snapshot directory per (if it does not exist yet):
+    >
+    >     ```shell
+    >     mkdir /srv/lxc/SNAPSHOTS/<containername>
+    >     ```
+
 3. Make a migratable tarfile (may take over 20 minutes):
 
     ```shell
