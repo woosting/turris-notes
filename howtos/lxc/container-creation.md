@@ -73,13 +73,13 @@
 
 ## Snapshot the container
 
-- Stop the container:
+1. Stop the container:
 
     ```shell
     lxc-stop -n <containername>
     ```
 
-10. Make a BTRFS snapshot of the container:
+2. Make a BTRFS snapshot of the container:
 
     ```shell
     btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>
