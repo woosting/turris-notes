@@ -103,7 +103,7 @@
 
     > SITUATIONAL: In case you do not have a target directory yet:
     >
-    > 1. Create a container-snapshot aggregation directory (if it does not exist yet):
+    > 1. Create a directory to aggrecontainer-snapshot aggregation directory (if it does not exist yet):
     >
     >     ```shell
     >     mkdir /srv/lxc/SNAPSHOTS
@@ -118,27 +118,13 @@
 3. Make a migratable tarfile (may take over 20 minutes):
 
     ```shell
-    lxc-backup
+    tar --numeric-owner -czvf /src/lxc/BACKUPS/<yyyymmdd>t<hhmm>-<containername>.tar.gz -C /srv/lxc/ <containername>
     ```
 
-    > SITUATIONAL: In case you do not have the script yet:
-    >
-    > 1. Download the script  (create the target directory if required):
+    > SITUATIONAL: In case you do not have a backup target directory yet:
     >
     >     ```shell
-    >     git clone https://github.com/woosting/lxc-backup.git /srv/scripts/lxc-backup
-    >     ```
-    >
-    > 3. Make the script executable:
-    >
-    >     ```shell
-    >     chmod 755 /srv/scripts/lxc-backup/lxc-backup.sh
-    >     ```
-    >     
-    > 4. Place a symbolic link in the path to make it available from any location:
-    >
-    >     ```shell
-    >     ln -s /srv/scripts/lxc-backup/lxc-backup.sh /usr/bin/lxc-backup
+    >     mkdir /srv/lxc/BACKUPS
     >     ```
 
 9. Start the container:
