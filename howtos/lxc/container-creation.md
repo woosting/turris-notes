@@ -29,6 +29,7 @@
     > 1. Download the script (create the target directory if required): `git clone https://github.com/woosting/cimports.git /srv/scripts/cimports`
     > 3. Make the script executable: `chmod 755 /srv/scripts/cimports/cimport.sh`
     > 4. Place a symbolic link in the path to make it available from any location: `ln -s /srv/scripts/cimports/cimport.sh /usr/bin/cimport`
+
 2. Grab a cup of coffee (±10 minutes)
 3. Enter the container: `lxc-attach -n <containername>`
 4. Change the password of root by an interactive script (follow instructions on screen): `passwd`
