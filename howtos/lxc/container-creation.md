@@ -1,3 +1,16 @@
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Container creation](#container-creation)
+	- [Create clean container](#create-clean-container)
+	- [Populate the container](#populate-the-container)
+	- [Backup the container](#backup-the-container)
+	- [Optional](#optional)
+		- [RSA-key based login](#rsa-key-based-login)
+		- [Make the container start at (re)boot](#make-the-container-start-at-reboot)
+- [References](#references)
+
+<!-- /TOC -->
+
 # Container creation
 
 ## Create clean container
