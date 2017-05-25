@@ -101,7 +101,7 @@
     btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>
     ```
 
-    > SITUATIONAL: In case you do not have a target directory yet:
+    > SITUATIONAL: In case you don't have a snapshot target directory yet:
     >
     > 1. Create a directory to aggrecontainer-snapshot aggregation directory (if it does not exist yet):
     >
@@ -121,7 +121,9 @@
     tar --numeric-owner -czvf /src/lxc/BACKUPS/<yyyymmdd>t<hhmm>-<containername>.tar.gz -C /srv/lxc/ <containername>
     ```
 
-    > SITUATIONAL: In case you do not have a backup target directory yet:
+    > SITUATIONAL: In case you don't have a backup target directory yet:
+    >
+    >  1. Create a directory to aggrecontainer-snapshot aggregation directory (if it does not exist yet):
     >
     >     ```shell
     >     mkdir /srv/lxc/BACKUPS
