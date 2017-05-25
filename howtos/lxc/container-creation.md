@@ -19,9 +19,7 @@
 ## Create clean container
 
 1. Create the BTRFS subvolume that will host the container: `btrfs subvolume create /srv/lxc/<containername>`
-
 2. Create a container with the same name as the created btrfs subvolume: `lxc-create -n <containername> -t download -P /srv/lxc/ -- -d <distribution> -r <release> -a <architecture>`
-
 3. Start the container: `lxc-start -n <containername>`
 
 ## Populate the container
