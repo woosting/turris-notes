@@ -37,41 +37,9 @@
 ## Backup the container
 
 1. Stop the container: `lxc-stop -n <containername>`
-2. Make a BTRFS snapshot of the container: `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
-
-    > In case you don't have a snapshot target directory yet:
-    >
-    > 1. Create a directory to aggrecontainer-snapshot aggregation directory (if it does not exist yet):
-    >
-    >     ```shell
-    >     mkdir /srv/lxc/SNAPSHOTS
-    >     ```
-    >
-    > 2. Create a specific container-snapshot directory:
-    >
-    >     ```shell
-    >     mkdir /srv/lxc/SNAPSHOTS/<containername>
-    >     ```
-
-3. Make a migratable tarfile (may take over 20 minutes):
-
-    ```shell
-    tar --numeric-owner -czvf /src/lxc/BACKUPS/<yyyymmdd>t<hhmm>-<containername>.tar.gz -C /srv/lxc/ <containername>
-    ```
-
-    > SITUATIONAL: In case you don't have a backup target directory yet:
-    >
-    >  Create the container-backups aggregation directory:
-    >
-    >     ```shell
-    >     mkdir /srv/lxc/BACKUPS
-    >     ```
-
-9. Start the container:
-
-      ```shell
-      lxc-start -n <containername>
-      ```
+2. Make a BTRFS snapshot of the container (create the target directory if required): `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
+3. Make a migratable tarfile (may take over 15 minutes): `tar --numeric-owner -czvf /src/lxc/BACKUPS/<yyyymmdd>t<hhmm>-<containername>.tar.gz -C /srv/lxc/ <containername>`
+4. Start the container: `lxc-start -n <containername>`
 
 ## Optional
 
