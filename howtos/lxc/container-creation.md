@@ -28,21 +28,7 @@
     cimport -c <containernaam> -u <username>
     ```
 
-    > SITUATIONAL: In case you do not have the script yet:
-    > 
-    > 1. Download the script:
-    >     ```shell
-    >     git clone https://github.com/woosting/cimports.git </path/to/scripts/>cimports
-    >     ```
-    >
-    > 3. Make the script executable:
-    >     ```shell
-    >     chmod 755 </path/to/scripts/>cimports/cimport.sh
-    >     ```
-    > 4. Place a symbolic link in the path to make it available from any location:
-    >    ```shell
-    >    ln -s </path/to/scripts/>cimports/cimport.sh /usr/bin/cimport
-    >    ```
+
 
 
 ## Populate the container (manual finetuning)
