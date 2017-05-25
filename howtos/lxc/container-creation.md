@@ -44,10 +44,11 @@
   >    ln -s </path/to/scripts/>cimports/cimport.sh /usr/bin/cimport
   >    ```
 
+
 ## 3. Populate the container (manual finetuning)
 
 5. Enter the container:
-
+  
   ```shell
   lxc-attach -n <containername>
   ```
