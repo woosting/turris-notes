@@ -38,6 +38,8 @@
 
 2. Create a container-specific snapshot target directory: `mkdir /srv/lxc/SNAPSHOTS/<directoryname>`
 
+0. TEST DO NOT EXECUTE THIS (SHOULD HAVE BEEN REMOOVED)
+
 2. Make a BTRFS snapshot of the container: `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
 
 3. Start the container: `lxc-start -n <containername>`
