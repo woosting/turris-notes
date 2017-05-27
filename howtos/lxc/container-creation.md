@@ -34,9 +34,9 @@
 
 1. Stop the container: `lxc-stop -n <containername>`
 
-2. Create the container target directory for its snapshots (create the: `mkdir /srv/lxc/SNAPSHOTS/<directoryname>
+2. Create a container-specific snapshot target directory (create the base `SNAPSHOTS` directory dirst if not present yet): mkdir /srv/lxc/SNAPSHOTS/<directoryname>
 
-2. Make a BTRFS snapshot of the container (create the target directory if required): `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
+2. Make a BTRFS snapshot of the container: `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
 
 3. Start the container: `lxc-start -n <containername>`
 
@@ -45,7 +45,7 @@
 
 1. Stop the container: `lxc-stop -n <containername>`
 
-2. Make a migratable tarfile (create the target directory if required): `tar --numeric-owner -czvf /srv/lxc/BACKUPS/<yyyymmdd>t<hhmm>-<containername>.tar.gz -C /srv/lxc/ <containername>`
+2. Make a migratable tarfile (create the base `BACKUPS` directory dirst if not present yet): `tar --numeric-owner -czvf /srv/lxc/BACKUPS/<yyyymmdd>t<hhmm>-<containername>.tar.gz -C /srv/lxc/ <containername>`
 
 3. ...Grab a cup of coffee (±5 minutes)...
 
