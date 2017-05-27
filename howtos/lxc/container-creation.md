@@ -32,13 +32,13 @@
 
 ## Snapshot the container
 
+0. TEST DO NOT EXECUTE THIS (SHOULD HAVE BEEN REMOOVED)
+
 0. Ensure a base snapshot target directory exists: `mkdir /srv/lxc/SNAPSHOTS/`
 
 1. Stop the container: `lxc-stop -n <containername>`
 
 2. Create a container-specific snapshot target directory: `mkdir /srv/lxc/SNAPSHOTS/<directoryname>`
-
-0. TEST DO NOT EXECUTE THIS (SHOULD HAVE BEEN REMOOVED)
 
 2. Make a BTRFS snapshot of the container: `btrfs subvolume snapshot /srv/lxc/<containername> /srv/lxc/SNAPSHOTS/<containername>/<date-time(iso_8601)_note>`
 
