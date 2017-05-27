@@ -32,8 +32,6 @@
 
 ## Snapshot the container
 
-0. TEST DO NOT EXECUTE THIS (SHOULD HAVE BEEN REMOOVED)
-
 0. Ensure a base snapshot target directory exists: `mkdir /srv/lxc/SNAPSHOTS/`
 
 1. Stop the container: `lxc-stop -n <containername>`
