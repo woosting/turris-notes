@@ -1,18 +1,47 @@
-# Workarounds:
+# Mount NFS shares
 
-1. Use another container template (tested to work with 'Ubuntu Yakkety').
+> NOTE: This procedure contains a workaround for the [nfs-common failing to start bug][1] in the provided Debian template for Turris Omnia. Once this is resolved regular linux procedures can be used.
+> ALTERNATIVE: Use another container template (tested to work with 'Ubuntu Yakkety').
 
-2. Use NSF3 (on server) and:
+1. Configure the server to use NSF3:
+2. Install NFS tooling (on the client): `apt install nfs-common`
+  
+  ```bash
+root@system:~# apt install nfs-common
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+  
+      ...
+...
+...
+  
+      invoke-rc.d: initscript nfs-common, action "start" failed.
+dpkg: error processing package nfs-common (--configure):
+ subprocess installed post-installation script returned error exit status 1
+Processing triggers for libc-bin (2.19-18+deb8u9) ...
+Processing triggers for systemd (215-17+deb8u7) ...
+Errors were encountered while processing:
+ nfs-common
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+root@system:~#
+```
+  > NOTE: The installation semi fails
 
- - Turn off idmapd loading after installing 'nfs-common' (on the client):
-    - root@container:~# `apt-get install nfs-common` (will semi-fail)
-    - root@container:~# `vim /etc/default/nfs-common`
-    - change `NEED_IDMAPD=` into `NEED_IDMAPD=no`
-    - root@container:~# `apt-get upgrade -y`
+3. Turn off idmapd loading (on the client):
 
- - [Change UIDs](https://askubuntu.com/questions/16700/how-can-i-change-my-own-user-id#16719) correspondingly with server if needed (*user can not be logged in during this change*):
-    - root@container:~# `usermod -u <NEW_UID> <USERNAME>`
-    - root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
+  1. Make a backup copy of the current nfs default config file: `cp /etc/default/nfs-common /etc/default/nfs-common.bak`
+  2. Open the nfs default config file for editing: `vim /etc/default/nfs-common`
+  2. Change `NEED_IDMAPD=` into `NEED_IDMAPD=no`
+
+4. root@container:~# `apt-get upgrade -y`
+
+---
+
+
+ 2. [Change UIDs](https://askubuntu.com/questions/16700/how-can-i-change-my-own-user-id#16719) correspondingly with server if needed (*user can not be logged in during this change*):
+    1. root@container:~# `usermod -u <NEW_UID> <USERNAME>`
+    2. root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
 
 # SUSPECTED ROOT CAUSE:
 
@@ -84,3 +113,5 @@ The command: `rpc.idmapd -fv` (from the bug-report) prints:
 This (taken from the output above): `Opening /proc/net/rpc/nfs4.nametoid/channel failed: errno 2 (No such file or directory)` seems to be related as the (marked) part indeed does not exist: /proc/net/rpc/`nfs4.nametoid/channel`
 
 > REFERENCE: https://forum.turris.cz/t/nfs-common-failing-in-lxc-container-debian-template/2689/8
+
+[1]:https://forum.turris.cz/t/nfs-common-failing-in-lxc-container-debian-template/2689/1
