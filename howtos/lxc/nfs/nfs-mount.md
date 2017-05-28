@@ -1,10 +1,10 @@
 # Mount NFS
 
 1. Install NFS tooling (on the client): `apt install nfs-common`
-2. WORK AROUND* the [nfs-common failing to start bug][1]:
+2. WORK AROUND* the [nfs-common failing to start in Debian template bug][1]:
 
-	> ATERNATIVE: Use another container template rendering this workaround superfluous (tested with 'Ubuntu Yakkety').
-	
+	> ATERNATIVE: Using another template renders this workaround superfluous (tested with 'Ubuntu Yakkety').
+
 	> NOTE: This step is a workaround for the [nfs-common failing to start bug][1] in the provided Debian template for Turris Omnia. Once this is resolved regular linux procedures can be used.
 
 	```bash
@@ -37,12 +37,14 @@
 		2. Open the nfs default config file for editing: `vim /etc/default/nfs-common`
 		3. Change `NEED_IDMAPD=` into `NEED_IDMAPD=no` and save the file.
 
-	3. root@container:~# `apt upgrade -y`
-	4. [Change UIDs](https://askubuntu.com/questions/16700/how-can-i-change-my-own-user-id#16719) correspondingly with server if needed:
+	3. Rerun the upgrade (mainly to start nfs-common): `apt upgrade -y`
+	4. [Change the UID](https://askubuntu.com/questions/16700/how-can-i-change-my-own-user-id#16719) to match the UID on the server side (refer to server documentation on how to look up the UID).:
 
-		1. Ensure the user is not logged in, nor that any processes still running by the user.
-		2. root@container:~# `usermod -u <NEW_UID> <USERNAME>`
+		1. Ensure the user is not logged in, nor that any processes are still running by the user.
+		2. Lookup (and remember!) the user's current UID: `cat /etc/passwd | grep <username>`
+		2. Change the user's UID# `usermod -u <NEW_UID> <USERNAME>`
 		3. root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
+4. blah
 
 
 ## *SUSPECTED ROOT CAUSE:
