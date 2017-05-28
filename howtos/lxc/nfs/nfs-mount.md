@@ -1,12 +1,11 @@
 # Mount NFS
 
-> NOTE: This procedure contains a workaround for the [nfs-common failing to start bug][1] in the provided Debian template for Turris Omnia. Once this is resolved regular linux procedures can be used.
+1. Install NFS tooling (on the client): `apt install nfs-common`
+2. WORK AROUND the [nfs-common failing to start bug][1]:
 
-> ALTERNATIVE: Use another container template (tested to work with 'Ubuntu Yakkety').
+	> NOTE: This step is a workaround for the [nfs-common failing to start bug][1] in the provided Debian template for Turris Omnia. Once this is resolved regular linux procedures can be used.
 
-1. Configure the server to use NSF3
-
-2. Install NFS tooling (on the client): `apt install nfs-common`
+	> ALTERNATIVE: Use another container template and this workaround is not nessesary anymore (tested to work with 'Ubuntu Yakkety').
 
 	```bash
 	root@system:~# apt install nfs-common
@@ -28,22 +27,22 @@
 	E: Sub-process /usr/bin/dpkg returned an error code (1)
 	root@system:~#
 	```
+
 	> NOTE: The installation semi fails because the service can not be started.
 
-3. Turn off idmapd loading (on the client):
+	1. Configure the server to use NSF3
+	2. Turn off idmapd loading (on the client):
+	
+		0. Make a backup copy of the current nfs default config file: `cp /etc/default/nfs-common /etc/default/nfs-common.bak`
+		1. Open the nfs default config file for editing: `vim /etc/default/nfs-common`
+		2. Change `NEED_IDMAPD=` into `NEED_IDMAPD=no` and save the file.
 
-	1. Make a backup copy of the current nfs default config file: `cp /etc/default/nfs-common /etc/default/nfs-common.bak`
-	2. Open the nfs default config file for editing: `vim /etc/default/nfs-common`
-	3. Change `NEED_IDMAPD=` into `NEED_IDMAPD=no`
+	3. root@container:~# `apt upgrade -y`
+	4. [Change UIDs](https://askubuntu.com/questions/16700/how-can-i-change-my-own-user-id#16719) correspondingly with server if needed:
 
-4. root@container:~# `apt-get upgrade -y`
-
----
-
-
- 2. [Change UIDs](https://askubuntu.com/questions/16700/how-can-i-change-my-own-user-id#16719) correspondingly with server if needed (*user can not be logged in during this change*):
-    1. root@container:~# `usermod -u <NEW_UID> <USERNAME>`
-    2. root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
+		0. Ensure the user is not logged in, nor that any processes still running by the user.
+		2. root@container:~# `usermod -u <NEW_UID> <USERNAME>`
+		3. root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
 
 # SUSPECTED ROOT CAUSE:
 
