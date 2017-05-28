@@ -1,9 +1,10 @@
 # Mount NFS
 
 > NOTE: This procedure contains a workaround for the [nfs-common failing to start bug][1] in the provided Debian template for Turris Omnia. Once this is resolved regular linux procedures can be used.
+
 > ALTERNATIVE: Use another container template (tested to work with 'Ubuntu Yakkety').
 
-1. Configure the server to use NSF3:
+1. Configure the server to use NSF3
 
 2. Install NFS tooling (on the client): `apt install nfs-common`
 
@@ -27,13 +28,13 @@
 	E: Sub-process /usr/bin/dpkg returned an error code (1)
 	root@system:~#
 	```
-	> NOTE: The installation semi fails
+	> NOTE: The installation semi fails because the service can not be started.
 
 3. Turn off idmapd loading (on the client):
 
-  1. Make a backup copy of the current nfs default config file: `cp /etc/default/nfs-common /etc/default/nfs-common.bak`
-  2. Open the nfs default config file for editing: `vim /etc/default/nfs-common`
-  2. Change `NEED_IDMAPD=` into `NEED_IDMAPD=no`
+	1. Make a backup copy of the current nfs default config file: `cp /etc/default/nfs-common /etc/default/nfs-common.bak`
+	2. Open the nfs default config file for editing: `vim /etc/default/nfs-common`
+	3. Change `NEED_IDMAPD=` into `NEED_IDMAPD=no`
 
 4. root@container:~# `apt-get upgrade -y`
 
