@@ -1,32 +1,33 @@
-# Mount NFS shares
+# Mount NFS
 
 > NOTE: This procedure contains a workaround for the [nfs-common failing to start bug][1] in the provided Debian template for Turris Omnia. Once this is resolved regular linux procedures can be used.
 > ALTERNATIVE: Use another container template (tested to work with 'Ubuntu Yakkety').
 
 1. Configure the server to use NSF3:
+
 2. Install NFS tooling (on the client): `apt install nfs-common`
-  
-  ```bash
-root@system:~# apt install nfs-common
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-  
-      ...
-...
-...
-  
-      invoke-rc.d: initscript nfs-common, action "start" failed.
-dpkg: error processing package nfs-common (--configure):
- subprocess installed post-installation script returned error exit status 1
-Processing triggers for libc-bin (2.19-18+deb8u9) ...
-Processing triggers for systemd (215-17+deb8u7) ...
-Errors were encountered while processing:
- nfs-common
-E: Sub-process /usr/bin/dpkg returned an error code (1)
-root@system:~#
-```
-  > NOTE: The installation semi fails
+
+	```bash
+	root@system:~# apt install nfs-common
+	Reading package lists... Done
+	Building dependency tree
+	Reading state information... Done
+
+	...
+	...
+	...
+
+	invoke-rc.d: initscript nfs-common, action "start" failed.
+	dpkg: error processing package nfs-common (--configure):
+	subprocess installed post-installation script returned error exit status 1
+	Processing triggers for libc-bin (2.19-18+deb8u9) ...
+	Processing triggers for systemd (215-17+deb8u7) ...
+	Errors were encountered while processing:
+	nfs-common
+	E: Sub-process /usr/bin/dpkg returned an error code (1)
+	root@system:~#
+	```
+	> NOTE: The installation semi fails
 
 3. Turn off idmapd loading (on the client):
 
