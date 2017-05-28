@@ -30,7 +30,7 @@
 
 	1. Configure the server to use NSF3
 	2. Turn off idmapd loading (on the client):
-	
+
 		1. Make a backup copy of the current nfs default config file: `cp /etc/default/nfs-common /etc/default/nfs-common.bak`
 		2. Open the nfs default config file for editing: `vim /etc/default/nfs-common`
 		3. Change `NEED_IDMAPD=` into `NEED_IDMAPD=no` and save the file.
@@ -41,8 +41,8 @@
 		1. Ensure the user is not logged in, nor that any processes still running by the user.
 		2. root@container:~# `usermod -u <NEW_UID> <USERNAME>`
 		3. root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
-	
-	> ATERNATIVE: Use another container template and this workaround is not nessesary anymore (tested to work with 'Ubuntu Yakkety').
+
+	> ATERNATIVE: Use another container template rendering this workaround superfluous (tested to work with 'Ubuntu Yakkety').
 
 
 ## *SUSPECTED ROOT CAUSE:
