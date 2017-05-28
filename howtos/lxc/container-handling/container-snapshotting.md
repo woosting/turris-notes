@@ -1,6 +1,7 @@
 # Snapshot container
 
-> NOTE: On Turris OS the [lxc-snapshot command results in an rsync error][1]. This workaround employs BTRFS to make snapshots on filesystem level instead. Once lxc-snapshot is properly working the a regular (linux general) procedure can be used.
+
+> NOTE: This procedure employs BTRFS to make snapshots on filesystem level because regular [lxc-snapshot functionality results in an rsync error on Turris][1]. Once `lxc-snapshot` is working properly regular linux procedures can be used.
 
 0. Ensure a base snapshot target directory exists: `mkdir /srv/lxc/SNAPSHOTS/`
 

@@ -7,7 +7,7 @@
     > 3. Make the script executable: `chmod 755 /srv/scripts/cimports/cimport.sh`
     > 4. Place a symbolic link in the path to make it available from any location: `ln -s /srv/scripts/cimports/cimport.sh /usr/bin/cimport`
 
-2. ...Grab a cup of coffee (±10 minutes)...
+2. Grab a cup of coffee... (±10 minutes)
 
 3. Enter the container: `lxc-attach -n <containername>`
 
