@@ -44,7 +44,6 @@
 		2. Lookup (and remember!) the user's current UID: `cat /etc/passwd | grep <username>`
 		2. Change the user's UID# `usermod -u <NEW_UID> <USERNAME>`
 		3. root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
-4. blah
 
 
 ## *SUSPECTED ROOT CAUSE:
