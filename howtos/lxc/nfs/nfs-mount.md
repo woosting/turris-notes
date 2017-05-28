@@ -7,8 +7,8 @@
 
 2. Install NFS tooling (on the client): `apt install nfs-common`
 
-	```bash
-	root@system:~# apt install nfs-common
+  ```bash
+  root@system:~# apt install nfs-common
 	Reading package lists... Done
 	Building dependency tree
 	Reading state information... Done
