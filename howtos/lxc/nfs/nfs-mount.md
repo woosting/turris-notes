@@ -3,6 +3,8 @@
 1. Install NFS tooling (on the client): `apt install nfs-common`
 2. WORK AROUND* the [nfs-common failing to start bug][1]:
 
+	> ATERNATIVE: Use another container template rendering this workaround superfluous (tested with 'Ubuntu Yakkety').
+	
 	> NOTE: This step is a workaround for the [nfs-common failing to start bug][1] in the provided Debian template for Turris Omnia. Once this is resolved regular linux procedures can be used.
 
 	```bash
@@ -41,8 +43,6 @@
 		1. Ensure the user is not logged in, nor that any processes still running by the user.
 		2. root@container:~# `usermod -u <NEW_UID> <USERNAME>`
 		3. root@container:~# `find / -uid <OLD_UID> -exec chown -h <NEW_UID> {} +`
-
-	> ATERNATIVE: Use another container template rendering this workaround superfluous (tested to work with 'Ubuntu Yakkety').
 
 
 ## *SUSPECTED ROOT CAUSE:
