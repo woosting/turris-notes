@@ -1,1 +1,0 @@
-The sshd.conf is located at: `/etc/config` (instead of at /etc/ssh/sshd.conf).
