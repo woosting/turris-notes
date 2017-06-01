@@ -22,14 +22,14 @@
     3. **IPv4-Address**: Any address available in your network topology (e.g. `192.168.1.2`).
 4. Make the containers startup automatically by adding to the container's configuration file the line: `lxc.start.auto = 1`.
 
-  > Turris omnia: Edit configuration file `/etc/config/lxc-auto` to include:
-  >
-  >```shell
-  >  config container
-  >    option name pihole
-  >    option timeout 30
-  >  ```
-  >  >Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
+    > Turris omnia: Edit configuration file `/etc/config/lxc-auto` to include:
+    >
+    >```shell
+    >  config container
+    >    option name pihole
+    >    option timeout 30
+    >  ```
+    >  >Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
 5. Boot the container and gain entrance:
 
   ```shell
