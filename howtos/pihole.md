@@ -31,7 +31,7 @@
 
     >Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
 
-adding to the container's configuration file the line: `lxc.start.auto = 1`.
+  > Or (with regular - non Turris - LXC containers adding the line: `lxc.start.auto = 1` to its configuration file.
 
 4. Boot the container: `lxc-start -n pihole`
 
