@@ -42,7 +42,8 @@
     2. Other than that use common sence (applying defaults where unsure).
     3. Note the password at the end of the installation wizard (although it can be changed later, should you ever forget it: `pihole -a -p new_password`).
 
-8. Check if the Pi-hole server is properly running by logging into it; e.g `http://192.168.1.2/admin` (using the password noted in the previous step).
+8. Check if the Pi-hole server is properly running by browsing to (and logging into) the webinterface of Pi-hole (e.g. `http://192.168.1.2/admin`, using the password noted in the previous step).
+
 9. Change [DHCP settings] of the LAN interface to use the Pi-hole as a primary DNS, and the router's as its fallback:
   - Turris Omnia:
     1. **[LuCi][3] > Interface (usually: LAN) > Edit > DHCP Server > Advanced Settings**
