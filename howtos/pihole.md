@@ -45,6 +45,8 @@
     2. Other than that use common sence (applying defaults where unsure).
     3. Note the password at the end of the installation wizard (although it can be changed later, should you ever forget it: `pihole -a -p new_password`).
 
+5. Exit the container: `exit`
+
 8. Check if the Pi-hole server is properly running by browsing to (and logging into) the webinterface of Pi-hole (e.g. `http://192.168.1.2/admin`, using the password noted in the previous step).
 
 9. Use the Pi-hole as a primary DNS and use the router's regular one as its fallback by changing the DHCP settings of the LAN interface; *[LuCi > Network > Interfaces][3] > Target interface (usually: LAN) > [Edit] > DHCP Server > |Advanced Settings|* to:
