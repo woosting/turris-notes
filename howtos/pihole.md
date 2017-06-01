@@ -20,9 +20,9 @@
         > For Turris Omnia: *[LuCi: Services > LXC Containers][2] > target-container > more > configure*
 
     3. **IPv4-Address**: Any address available in your network topology (e.g. `192.168.1.2`).
-4. Make the containers startup automatically by adding to the container's configuration file the line: `lxc.start.auto = 1`.
+3. Make the containers startup automatically by adding to the container's configuration file the line: `lxc.start.auto = 1`.
 
-    > Turris omnia: Edit configuration file `/etc/config/lxc-auto` to include:
+    > For Turris Omnia: Edit configuration file `/etc/config/lxc-auto` to include:
     >
     >```shell
     >  config container
@@ -30,25 +30,18 @@
     >    option timeout 30
     >  ```
     >  >Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
-5. Boot the container and gain entrance:
+4. Boot the container: `lxc-start -n pihole`
 
-  ```shell
-$ lxc-start -n pihole
-$ lxc-attach -n pihole
-```
-6. Install packages required to get the installer going:
+5. Enter the container: `lxc-attach -n pihole`
 
-  ```shell
-$ apt-get install -y ca-certificates curl
-```
-7. Install and configure Pi-hole itself (via an ncurses installer wizard):
+6. Install packages required to get the installer going: `apt install -y ca-certificates curl`
 
-  ```shell
-$ curl -sSL https://install.pi-hole.net | bash
-```
+7. Install and configure Pi-hole itself (via an ncurses installer wizard): `$ curl -sSL https://install.pi-hole.net | bash`
+
   1. When asked for (ipv4) nameservers, select `custom` and enter your router's ip (typically: `192.168.1.1`).
   2. Other than that use common sence (applying defaults where unsure).
   3. Note the password at the end of the installation wizard (although it can be changed later, should you ever forget it: `pihole -a -p new_password`).
+
 8. Check if the Pi-hole server is properly running by logging into it; e.g `http://192.168.1.2/admin` (using the password noted in the previous step).
 9. Change [DHCP settings] of the LAN interface to use the Pi-hole as a primary DNS, and the router's as its fallback:
   - Turris Omnia:
