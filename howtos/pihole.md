@@ -7,8 +7,9 @@
   > This how-to assumes either: _Ubuntu xenial_ or _Debian Jessie_.
 
 2. Have your assign a static IP address to the LXC container at *[LuCi: Network > DHCP and DNS >][1] Static Leases*:
+
     1. **Hostname**: `pihole`.
-    2. **MAC-Address**: `xx:xx:xx:xx:xx:xx` found in the lxc container's configuration file (search for):
+    2. **MAC-Address**: `xx:xx:xx:xx:xx:xx` open the lxc container's configuration file: *[LuCi: Services > LXC Containers][2] > target-container > more > configure* and search for:
 
         ```
         ...
@@ -17,19 +18,21 @@
 
         ...
         ```
-        > For Turris Omnia: *[LuCi: Services > LXC Containers][2] > target-container > more > configure*
 
     3. **IPv4-Address**: Any address available in your network topology (e.g. `192.168.1.2`).
-3. Make the containers startup automatically by adding to the container's configuration file the line: `lxc.start.auto = 1`.
 
-    > For Turris Omnia: Edit configuration file `/etc/config/lxc-auto` to include:
-    >
-    >```shell
-    >  config container
-    >    option name pihole
-    >    option timeout 30
-    >  ```
-    >  >Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
+3. Make the containers startup automatically open the configuration file `/etc/config/lxc-auto` and include:
+
+  ```shell
+  config container
+      option name pihole
+      option timeout 30
+      ```
+
+  >Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
+
+adding to the container's configuration file the line: `lxc.start.auto = 1`.
+
 4. Boot the container: `lxc-start -n pihole`
 
 5. Enter the container: `lxc-attach -n pihole`
@@ -45,7 +48,7 @@
 8. Check if the Pi-hole server is properly running by browsing to (and logging into) the webinterface of Pi-hole (e.g. `http://192.168.1.2/admin`, using the password noted in the previous step).
 
 9. Change [DHCP settings] of the LAN interface to use the Pi-hole as a primary DNS, and the router's as its fallback:
-  - Turris Omnia:
+  Turris Omnia:
     1. **[LuCi][3] > Interface (usually: LAN) > Edit > DHCP Server > Advanced Settings**
     2. **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
 10. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
