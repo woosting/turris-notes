@@ -6,11 +6,11 @@
 
   > This how-to assumes either: _Ubuntu xenial_ or _Debian Jessie_.
 
-2. Have your assign a static IP address to the LXC container at [LuCi: Network > DHCP and DNS > *Static Leases*][1] :
+2. Have your assign a static IP address to the LXC container at [LuCi: Network > DHCP and DNS >][1] *Static Leases*:
     1. **Hostname**: `pihole`.
     2. **MAC-Address**: The one found at:
       - Regular: The lxc container's configuration file (this remains to be tested!!!).
-      - Turris Omnia: LuCi: [Services > LXC Containers][2] > Container > more > configure
+      - Turris Omnia: [LuCi: Services > LXC Containers][2] > <target container> > more > configure
 
         and search for:
 
