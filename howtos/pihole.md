@@ -54,10 +54,6 @@
 10. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
 11. Clear browser cashes if nessesary.
 
-ENJOY ADD-FREE BROWSING
-
-But please consider donating registering for a subscriptions at content providers you deem worthy of your money!
-
 
 # Notes
 
