@@ -8,7 +8,7 @@
 
 2. Have your assign a static IP address to the LXC container at *[LuCi: Network > DHCP and DNS >][1] Static Leases*:
     1. **Hostname**: `pihole`.
-    2. **MAC-Address**: `xx:xx:xx:xx:xx:xx` found at the lxc container's configuration file, search for:
+    2. **MAC-Address**: `xx:xx:xx:xx:xx:xx` found in the lxc container's configuration file (search for):
 
         ```
         ...
@@ -20,16 +20,16 @@
         > For Turris Omnia: *[LuCi: Services > LXC Containers][2] > target-container > more > configure*
 
     3. **IPv4-Address**: Any address available in your network topology (e.g. `192.168.1.2`).
-4. Make the containers startup automatically:
-  - Regular: Add the line `lxc.start.auto = 1` to the container's configuration file.
-  - Turris omnia: Edit configuration file `/etc/config/lxc-auto` to include:
+4. Make the containers startup automatically by adding to the container's configuration file the line: `lxc.start.auto = 1`.
 
-    ```shell
-    config container
-      option name pihole
-      option timeout 30
-    ```
-    Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
+  > Turris omnia: Edit configuration file `/etc/config/lxc-auto` to include:
+  >
+  >```shell
+  >  config container
+  >    option name pihole
+  >    option timeout 30
+  >  ```
+  >  >Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
 5. Boot the container and gain entrance:
 
   ```shell
