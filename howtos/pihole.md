@@ -27,7 +27,7 @@
   config container
       option name pihole
       option timeout 30
-      ```
+  ```
 
   >Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
 
