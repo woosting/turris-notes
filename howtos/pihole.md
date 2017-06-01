@@ -2,12 +2,25 @@
 
 ## Procedure
 
-1. Create a new LXC container (this how-to assumes either: _Ubuntu xenial_ or _Debian Jessie_).
-2. Have your [router's DHCP server][1] assign a static IP address to the LXC container:
+1. Create a new LXC container.
+
+  > This how-to assumes either: _Ubuntu xenial_ or _Debian Jessie_.
+
+2. Have your assign a static IP address to the LXC container at [LuCi: Network > DHCP and DNS > *Static Leases*][1] :
     1. **Hostname**: `pihole`.
-    2. **MAC-Address**: found at:
+    2. **MAC-Address**: The one found at:
       - Regular: The lxc container's configuration file (this remains to be tested!!!).
-      - Turris Omnia: **[Services/Containers][2] > container > more > configure > ``lxc.network.hwaddr``**.
+      - Turris Omnia: LuCi: [Services > LXC Containers][2] > Container > more > configure
+
+        and search for:
+
+        ```
+        ...
+
+        lxc.network.hwaddr = xx:xx:xx:xx:xx:xx
+
+        ...
+        ```
     3. **IPv4-Address**: Any address available in your network topology (e.g. `192.168.1.2`).
 4. Make the containers startup automatically:
   - Regular: Add the line `lxc.start.auto = 1` to the container's configuration file.
