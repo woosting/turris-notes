@@ -9,10 +9,7 @@
 2. Have your assign a static IP address to the LXC container at *[LuCi: Network > DHCP and DNS >][1] Static Leases*:
     1. **Hostname**: `pihole`.
     2. **MAC-Address**: The one found at:
-      - The lxc container's configuration file.
-      > For Turris Omnia: *[LuCi: Services > LXC Containers][2] > target-container > more > configure*
-
-        and search for:
+      - Open the lxc container's configuration file and search for:
 
         ```
         ...
@@ -21,6 +18,8 @@
 
         ...
         ```
+        > For Turris Omnia: *[LuCi: Services > LXC Containers][2] > target-container > more > configure*
+
     3. **IPv4-Address**: Any address available in your network topology (e.g. `192.168.1.2`).
 4. Make the containers startup automatically:
   - Regular: Add the line `lxc.start.auto = 1` to the container's configuration file.
