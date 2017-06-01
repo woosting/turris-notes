@@ -54,7 +54,8 @@
     - **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
 
 10. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
-11. Clear browser cashes if nessesary.
+
+11. Clear browser caches if necessary.
 
 
 # Notes
