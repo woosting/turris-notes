@@ -10,7 +10,7 @@
     1. **Hostname**: `pihole`.
     2. **MAC-Address**: The one found at:
       - Regular: The lxc container's configuration file (this remains to be tested!!!).
-      - Turris Omnia: [LuCi: Services > LXC Containers][2] > <target container> > more > configure
+      - Turris Omnia: [LuCi: Services > LXC Containers][2] > target-container > more > configure
 
         and search for:
 
