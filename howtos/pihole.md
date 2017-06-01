@@ -49,8 +49,8 @@
 
 9. Use the Pi-hole as a primary DNS and use the router's regular one as its fallback by changing the DHCP settings of the LAN interface to:
 
-  1. **[LuCi][3] > Interface (usually: LAN) > Edit > DHCP Server > Advanced Settings**
-  2. **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
+    1. **[LuCi][3] > Interface (usually: LAN) > Edit > DHCP Server > Advanced Settings**
+    2. **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
 
 10. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
 11. Clear browser cashes if nessesary.
