@@ -6,7 +6,7 @@ In the guest (container):
 
 2. root@container:~# `vim /lib/systemd/system/getty@.service` and comment-out the line:
 
-        ```
+    ```
 	ConditionPathExists=/dev/tty0
 	```
 
