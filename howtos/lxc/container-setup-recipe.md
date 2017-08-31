@@ -12,4 +12,4 @@
 [2]:container-handling/population.md
 [3]:container-handling/snapshotting.md
 [4]:container-handling/backup.md
-[5]:container-handling/auto-starting.md
+[5]:container-handling/autostarting.md

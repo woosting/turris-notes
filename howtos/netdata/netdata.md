@@ -1,28 +1,29 @@
 # Netdata
 
-Net data is a statistics network data monitor, having a sleek webinterface.
+> NOTE: Netdata is a statistics network data monitor, having a sleek webinterface.
 
 ## Installation
 
-In order to update the package list, install-, and start the netdata monitor on the Turris Omnia:
+Update the package list, install-, and start the netdata monitor:
 
-- **root@turris:~#** `opkg update && opkg install netdata && netdata`
-
-As a result Turris' Netdata will serve various statics on port 19999.
+```
+# opkg update && opkg install netdata && netdata
+```
 
 ## Usage
 
-Open your browser of choice and surf to the Omnia's address on port 19999:
+Open your webbrowser of choice and surf to the Omnia's address on port 19999:
 
-- `http://192.168.1.1:19999`
-
-To be presented with
+```
+http://192.168.1.1:19999
+```
 
 ![netdata example overview][2]
 
 ## References
 
-Adapted from (Turris omnia forum): [Monitoring Omnia with NetData][1]
+> Adapted from: Turris Omnia forum:
+> [Monitoring Omnia with NetData][1]
 
 <!-- REFERENCES -->
 

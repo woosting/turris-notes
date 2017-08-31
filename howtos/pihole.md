@@ -1,61 +1,81 @@
-# Install Pi-hole (router level add blocker)
+# Install Pi-hole
 
-## Procedure
+> NOTE Pi-hole is a router-level add blocker (thus protecting the entire network).
 
-1. Create a new LXC container (this how-to assumes either: _Ubuntu xenial_ or _Debian Jessie_).
-2. Have your [router's DHCP server][1] assign a static IP address to the LXC container:
-    1. **Hostname**: `pihole`.
-    2. **MAC-Address**: found at:
-      - Regular: The lxc container's configuration file (this remains to be tested!!!).
-      - Turris Omnia: **[Services/Containers][2] > container > more > configure > ``lxc.network.hwaddr``**.
+
+> NOTE: For _Ubuntu xenial_ or _Debian Jessie_.
+
+1. Create a new LXC container.
+
+2. Assign a static IP address to the LXC container at *[LuCi: Network > DHCP and DNS >][1] Static Leases*:
+
+    1. Set **hostname**: `pihole`
+    2. Set **MAC-Address**: `xx:xx:xx:xx:xx:xx` open the lxc container's configuration file: *[LuCi: Services > LXC Containers][2] > target-container > more > configure* and search for:
+
+        ```shell
+        lxc.network.hwaddr = xx:xx:xx:xx:xx:xx
+        ```
+
     3. **IPv4-Address**: Any address available in your network topology (e.g. `192.168.1.2`).
-4. Make the containers startup automatically:
-  - Regular: Add the line `lxc.start.auto = 1` to the container's configuration file.
-  - Turris omnia: Edit configuration file `/etc/config/lxc-auto` to include:
+
+3. Make the containers startup automatically open the configuration file `/etc/config/lxc-auto` and include:
 
     ```shell
     config container
-      option name pihole
-      option timeout 30
+        option name pihole
+        option timeout 30
     ```
-    Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
-5. Boot the container and gain entrance:
 
-  ```shell
-$ lxc-start -n pihole
-$ lxc-attach -n pihole
-```
+    > NOTE: Containers configured here will get started at boot and correctly be halted during shutdowns. Set timeout options specify how much time in seconds the containers have to gracefully shutdown before being killed (default: 300 seconds).
+
+    > ALTERNATIVE: Regular - non Turris - LXC containers, need to have  line: `lxc.start.auto = 1` to their configuration file.
+
+4. Boot the container:
+
+	```
+	# lxc-start -n pihole
+	```
+
+5. Enter the container:
+
+	```
+	# lxc-attach -n pihole
+	```
+
 6. Install packages required to get the installer going:
 
-  ```shell
-$ apt-get install -y ca-certificates curl
-```
+	```
+	# apt install -y ca-certificates curl
+	```
+
 7. Install and configure Pi-hole itself (via an ncurses installer wizard):
 
-  ```shell
-$ curl -sSL https://install.pi-hole.net | bash
-```
-  1. When asked for (ipv4) nameservers, select `custom` and enter your router's ip (typically: `192.168.1.1`).
-  2. Other than that use common sence (applying defaults where unsure).
-  3. Note the password at the end of the installation wizard (although it can be changed later, should you ever forget it: `pihole -a -p new_password`).
-8. Check if the Pi-hole server is properly running by logging into it; e.g `http://192.168.1.2/admin` (using the password noted in the previous step).
-9. Change [DHCP settings] of the LAN interface to use the Pi-hole as a primary DNS, and the router's as its fallback:
-  - Turris Omnia:
-    1. **[LuCi][3] > Interface (usually: LAN) > Edit > DHCP Server > Advanced Settings**
-    2. **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
+	```
+	# curl -sSL https://install.pi-hole.net | bash
+	```
+
+    1. When asked for (ipv4) nameservers, select `custom` and enter your router's ip (typically: `192.168.1.1`).
+    2. Other than that use common sence (applying defaults where unsure).
+    3. Note the password at the end of the installation wizard (although it can be changed later, should you ever forget it: `pihole -a -p new_password`).
+
+5. Exit the container:
+
+	```
+	# exit
+	```
+
+8. Check if the Pi-hole server is properly running by browsing to (and logging into) the webinterface of Pi-hole (e.g. `http://192.168.1.2/admin`, using the password noted in the previous step).
+
+9. Set the DHCP to the Pihole IP address and use the router's regular one as its fallback: *[LuCi > Network > Interfaces][3] > Target interface (usually: LAN) > [Edit] > DHCP Server > | Advanced Settings |* to: **DHCP-Options**: `6,192.168.1.2,192.168.1.1`
+
+	> ALTERNATIVE: Configure clients to use the Pi-hole as their DNS server statically.
+
 10. Renew your existing IP/leases on your (desktop) clients to make them aware of the new DNS server.
-11. Clear browser cashes if nessesary.
 
-ENJOY ADD-FREE BROWSING
-
-But please consider donating registering for a subscriptions at content providers you deem worthy of your money!
+11. Clear browser caches if necessary.
 
 
-# Notes
-
-Hyperlinks used in this how-to are pointing to the LuCi interface of the open source Turris Omnia router.
-
-Alternatively configure clients to use the Pi-hole as their DNS server statically instead of step 9 to 11 if preferred.
+> NOTE: Hyperlinks used in this how-to are pointing to the LuCi interface of the open source Turris Omnia router.
 
 
 <!-- REFERENCES -->
