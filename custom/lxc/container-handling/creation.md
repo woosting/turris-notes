@@ -8,9 +8,9 @@
 
 2. Snapshot the base container:
 
-  ```
-  # lxc-snapshot -n <containername>
-  ```
+	```
+	# lxc-snapshot -n <containername>
+	```
 
 
 <!-- REFERENCES -->
