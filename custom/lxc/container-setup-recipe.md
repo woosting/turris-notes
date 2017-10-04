@@ -1,10 +1,11 @@
 # Setup container
 
 1. [Create container][1]
-2. [Populate container][2]
-3. [Snapshot container][3]
-4. [Backup container][4]
-5. [Make container autostart at host (re)boot][5]
+2. [Snapshot container][3]
+3. [Populate container][2]
+4. [Snapshot container][3]
+5. [Backup container][4]
+6. [Make container autostart at host (re)boot][5]
 
 <!-- REFERENCES -->
 
