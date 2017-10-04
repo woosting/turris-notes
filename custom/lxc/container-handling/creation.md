@@ -2,9 +2,9 @@
 
 Create the container:
 
-	```
-	# lxc-create -B btrfs -n <containername> -t download -P /srv/lxc/ -- -d <distribution> -r <release> -a <architecture>
-	```
+```
+# lxc-create -B btrfs -n <containername> -t download -P /srv/lxc/ -- -d <distribution> -r <release> -a <architecture>
+```
 
 <!-- REFERENCES -->
 
