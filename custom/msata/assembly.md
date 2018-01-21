@@ -10,7 +10,7 @@ Add internal storage to the Turris Omnia (for LXC containers):
 	```
 3. Format the new drive:
 	```
-	# mkfs.btrfs /dev/sda
+	# mkfs.btrfs /dev/sda1
 	```
 	> ALTERNATIVE:
 	> ```
