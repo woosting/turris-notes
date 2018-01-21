@@ -8,13 +8,13 @@ Add internal storage to the Turris Omnia (for LXC containers):
 	```
 	# fdisk /dev/sda
 	```
-3. Format the new drive:
+3. Format the new drive<partitionnr>):
 	```
-	# mkfs.btrfs /dev/sda
+	# mkfs.btrfs /dev/sda1
 	```
 	> ALTERNATIVE:
 	> ```
-	> # mkfs.ext4 /dev/sda
+	> # mkfs.ext4 /dev/sda1
 	> ```
 4. Mount the new filesystem to a mountpoint: LuCI: _systeem > Mount Points_
 	SSH CLI:
