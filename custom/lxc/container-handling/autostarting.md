@@ -18,4 +18,4 @@
             option timeout <xxx>
     ```
 
-    > `option timeout <xxx>` - time, in seconds, containers have for graceful shutdowns before being killed (default: 300 s).
+    > `option timeout <xxx>` The time containers get for graceful shutdowns before being killed (default: 300 seconds).
