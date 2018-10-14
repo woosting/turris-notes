@@ -7,3 +7,5 @@ Crontab:
  30  3  1  *  * lxc-backup -a >> /srv/log/lxc-backup.log 2>&1
  30  3 15  *  * lxc-backup -s -a >> /srv/log/lxc-snapshot.log 2>&1
 ```
+
+See also: [Discussion on Omnia forum](https://forum.turris.cz/t/installing-msata-what-are-the-correct-formatting-setups/1765/13?u=woosting)
